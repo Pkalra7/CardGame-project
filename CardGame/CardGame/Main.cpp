@@ -3,6 +3,7 @@ int main(int narg, char *args[]){
     Table table;
     int noPlayers=0;
     int persistentPlayerTurn=0;
+    String playername;
     Player** players;
     //opens the files specified by the argument and loads game data
     if (narg >1){
@@ -28,6 +29,9 @@ int main(int narg, char *args[]){
         ifs.close();
     }
     else{
+        cout << "Please enter player 1's name" << endl;
+        cin >> playername;
+        players[0] = new Player
 
     }
 	return 0;

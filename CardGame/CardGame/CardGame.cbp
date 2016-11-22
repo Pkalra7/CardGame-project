@@ -27,9 +27,18 @@
 				<Option compiler="gcc" />
 			</Target>
 		</Build>
+		<Unit filename="Card.h" />
+		<Unit filename="CardFactory.h" />
+		<Unit filename="Chain.h" />
+		<Unit filename="Deck.h" />
+		<Unit filename="DiscardPile.h" />
+		<Unit filename="Hand.h" />
 		<Unit filename="Main.cpp" />
+		<Unit filename="Player.h" />
 		<Unit filename="SaveGame.cpp" />
 		<Unit filename="SaveGame.h" />
+		<Unit filename="Table.h" />
+		<Unit filename="TradeArea.h" />
 		<Extensions>
 			<code_completion />
 			<envvars />
