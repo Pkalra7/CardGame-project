@@ -1,6 +1,8 @@
 #ifndef CARD_H
 #define CARD_H
-#endif // CARD_H
+
+
+// CARD_H
 class Card{
 
 public:
@@ -13,3 +15,4 @@ public:
     virtual void print(const ostream& out);
 };
 
+#endif 

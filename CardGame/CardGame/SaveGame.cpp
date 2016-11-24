@@ -1,7 +1,6 @@
 //SaveGame.cpp
-//Hello Ishaaq, do you cpp?
-//No I do not cpp.
 
+#include "Deck.h"
 #include "SaveGame.h"
 SaveGame::SaveGame(){}
 

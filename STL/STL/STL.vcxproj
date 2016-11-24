@@ -19,8 +19,8 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{67CE60EE-05DB-4B5D-BCCC-995ABE46515B}</ProjectGuid>
-    <RootNamespace>CardGame</RootNamespace>
+    <ProjectGuid>{7A78980D-131B-467A-A3A8-A31620797E4F}</ProjectGuid>
+    <RootNamespace>STL</RootNamespace>
     <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -110,21 +110,10 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="CardFactory.cpp" />
-    <ClCompile Include="Main.cpp" />
-    <ClCompile Include="SaveGame.cpp" />
+    <ClCompile Include="Source.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Card.h" />
-    <ClInclude Include="CardFactory.h" />
-    <ClInclude Include="Chain.h" />
-    <ClInclude Include="Deck.h" />
-    <ClInclude Include="DiscardPile.h" />
-    <ClInclude Include="Hand.h" />
-    <ClInclude Include="Player.h" />
-    <ClInclude Include="SaveGame.h" />
-    <ClInclude Include="Table.h" />
-    <ClInclude Include="TradeArea.h" />
+    <ClInclude Include="Point2D.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
