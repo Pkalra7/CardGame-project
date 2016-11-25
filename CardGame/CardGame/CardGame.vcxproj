@@ -110,21 +110,38 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Amethyst.cpp" />
+    <ClCompile Include="Card.cpp" />
     <ClCompile Include="CardFactory.cpp" />
+    <ClCompile Include="Emerald.cpp" />
+    <ClCompile Include="Hematite.cpp" />
     <ClCompile Include="Main.cpp" />
+    <ClCompile Include="Malachite.cpp" />
+    <ClCompile Include="Obsidian.cpp" />
+    <ClCompile Include="Quartz.cpp" />
+    <ClCompile Include="Ruby.cpp" />
     <ClCompile Include="SaveGame.cpp" />
+    <ClCompile Include="Turquoise.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Amethyst.h" />
     <ClInclude Include="Card.h" />
     <ClInclude Include="CardFactory.h" />
     <ClInclude Include="Chain.h" />
     <ClInclude Include="Deck.h" />
     <ClInclude Include="DiscardPile.h" />
+    <ClInclude Include="Emerald.h" />
     <ClInclude Include="Hand.h" />
+    <ClInclude Include="Hematite.h" />
+    <ClInclude Include="Malachite.h" />
+    <ClInclude Include="Obsidian.h" />
     <ClInclude Include="Player.h" />
+    <ClInclude Include="Quartz.h" />
+    <ClInclude Include="Ruby.h" />
     <ClInclude Include="SaveGame.h" />
     <ClInclude Include="Table.h" />
     <ClInclude Include="TradeArea.h" />
+    <ClInclude Include="Turquoise.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

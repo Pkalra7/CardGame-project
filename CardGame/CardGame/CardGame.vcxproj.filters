@@ -24,6 +24,33 @@
     <ClCompile Include="CardFactory.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Quartz.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Card.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Obsidian.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Hematite.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Malachite.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Turquoise.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Ruby.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Amethyst.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Emerald.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="SaveGame.h">
@@ -54,6 +81,30 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="TradeArea.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Hematite.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Obsidian.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Malachite.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Turquoise.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Ruby.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Amethyst.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Emerald.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Quartz.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
