@@ -5,13 +5,13 @@ Amethyst::Amethyst() : Card() {
 	cardName = "Amethyst";
 }
 
-void Amethyst::print(ostream& out){
+void Amethyst::print(ostream& out) const{
 	char ameth = 'A';
 	out.clear();
 	out.put(ameth);
 }
 
-int Amethyst::getCardsPerCoin(int coins){
+int Amethyst::getCardsPerCoin(int coins) const {
 
 	//Amethyst 2 3 4 5
 
@@ -38,6 +38,4 @@ int Amethyst::getCardsPerCoin(int coins){
 		break;
 	}
 
-	
-
-
+}

@@ -1,18 +1,18 @@
 #include "Ruby.h"
 
-Ruby::Ruby() : Card() {
+Ruby::Ruby() {
 
 	cardName = "Ruby";
 
 }
 
-void Ruby::print(ostream& out){
+void Ruby::print(ostream& out) const{
 char ruby = 'R';
 out.clear();
 out.put(ruby);
 }
 
-int Ruby::getCardsPerCoin(int coins) {
+int Ruby::getCardsPerCoin(int coins) const{
 
 	//Ruby 2 4 5 6
 

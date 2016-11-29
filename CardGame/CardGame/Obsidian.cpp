@@ -1,16 +1,16 @@
 #include "Obsidian.h"
 
-Obsidian::Obsidian() :Card() {
+Obsidian::Obsidian() {
 	cardName = "Obsidian";
 }
 
-void Obsidian::print(ostream& out) {
+void Obsidian::print(ostream& out) const{
 	char obsid = 'O';
 	out.clear();
 	out.put(obsid);
 }
 
-int Obsidian::getCardsPerCoin(int coins) {
+int Obsidian::getCardsPerCoin(int coins) const{
 
 	//Obsidian 3 5 7 8
 

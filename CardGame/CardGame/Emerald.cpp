@@ -6,15 +6,15 @@ Emerald::Emerald() : Card() {
 
 }
 
-void Emerald::print(ostream& out){
+void Emerald::print(ostream& out) const{
 	char emer = 'E';
 	out.clear();
 	out.put(emer);
 }
 
-int Emerald::getCardsPerCoin(int coins) {
+int Emerald::getCardsPerCoin(int coins) const {
 
-	//Ruby 2 4 5 6
+	//Emerald 2 3 3
 
 
 	int c = coins;

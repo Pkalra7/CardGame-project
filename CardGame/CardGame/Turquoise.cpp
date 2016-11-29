@@ -1,14 +1,17 @@
 #include "Turquoise.h"
 
-Turquoise::Turquoise() :Card()
+Turquoise::Turquoise() 
 {
 	cardName = "Turquoise";
 }
 
 
-int Turquoise::getCardsPerCoin(int coins) {
+//returns # of cards required for a given input of into coins. Defualt case implies
+int Turquoise::getCardsPerCoin(int coins) const{
 
-	//Turquoise 2 4 6 7
+	//Turquoise 2 4 6 7
+
+
 	int c = coins;
 
 	switch (c) {
@@ -33,7 +36,7 @@ int Turquoise::getCardsPerCoin(int coins) {
 	}
 }
 
-void Turquoise::print(ostream& out) {
+void Turquoise::print(ostream& out) const{
 	char turq = 'T';
 	out.clear();
 	out.put(turq);

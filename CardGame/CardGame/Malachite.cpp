@@ -1,13 +1,13 @@
 #include "Malachite.h"
 
-Malachite::Malachite() : Card()
+Malachite::Malachite() 
 {
 	cardName = "Malachite";
 }
 
 
 
-int Malachite::getCardsPerCoin(int coins) {
+int Malachite::getCardsPerCoin(int coins) const {
 
 	//Malachite 3 5 6 7
 
@@ -36,7 +36,7 @@ int Malachite::getCardsPerCoin(int coins) {
 	}
 }
 
-void Malachite::print(ostream& out) {
+void Malachite::print(ostream& out)const {
 	char malac = 'M';
 	out.clear();
 	out.put(malac);

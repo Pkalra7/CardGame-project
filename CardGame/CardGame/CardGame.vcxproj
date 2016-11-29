@@ -113,6 +113,7 @@
     <ClCompile Include="Amethyst.cpp" />
     <ClCompile Include="Card.cpp" />
     <ClCompile Include="CardFactory.cpp" />
+    <ClCompile Include="Deck.cpp" />
     <ClCompile Include="Emerald.cpp" />
     <ClCompile Include="Hematite.cpp" />
     <ClCompile Include="Main.cpp" />

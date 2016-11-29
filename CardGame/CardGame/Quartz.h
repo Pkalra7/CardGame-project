@@ -6,9 +6,8 @@
 class Quartz :public Card {
 public:
 	Quartz();
-	int getCardsPerCoin(int coins);
-	virtual string getName();
-	void print(ostream & out);
+	int getCardsPerCoin(int coins) const;
+	void print(ostream & out) const;
 	
 };
 #endif

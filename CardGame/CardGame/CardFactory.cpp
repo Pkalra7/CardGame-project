@@ -1,20 +1,32 @@
 #include "CardFactory.h"
+#include <iostream>
+#include "Card.h"
 
+using namespace std;
+
+int CardFactory::count = 0;
+
+CardFactory::CardFactory() {
+	count = 1;
+}
 
 
 CardFactory* CardFactory::getFactory() {
 	if (count == 0) {
-		obj = new CardFactory();
+		CardFactory * obj = new CardFactory();
+		cout << "cardfactory created" << endl;
+		return obj;
 	}
-
-	return obj;
 }
 
 CardFactory::~CardFactory() {
-	delete obj; count = 0;
+	 
 }
 
-CardFactory::getDeck() {
+Deck& CardFactory::getDeck() {
+
+	for (vector<Card>::iterator iter= newDeck.begin())
+
 	/*
 	Fill Deck with 104 cards
 	20 Quartz
@@ -26,4 +38,6 @@ CardFactory::getDeck() {
 	8 Amethyst
 	6 Emerald
 	*/
+	
+
 }

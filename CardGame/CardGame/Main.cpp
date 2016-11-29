@@ -1,5 +1,16 @@
+#include <iostream>
+#include "CardFactory.h"
+#include "Deck.h"
+#include "Card.h"
+
 int main(int narg, char *args[]){
-    Deck<shared_ptr<Card>>deck;
+
+
+	CardFactory * cf = CardFactory::getFactory();
+	int n;
+	cin >> n;
+	
+    /*Deck<shared_ptr<Card>>deck;
     Table table;
     int noPlayers=0;
     int persistentPlayerTurn=0;
@@ -34,5 +45,5 @@ int main(int narg, char *args[]){
         players[0] = new Player
 
     }
-	return 0;
+*/	return 0;
 }

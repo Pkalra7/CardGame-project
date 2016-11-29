@@ -8,7 +8,7 @@ class Turquoise:public Card
 {
 public:
 	Turquoise();
-	int getCardsPerCoin(int coins); 
-	void print(ostream & out);
+	int getCardsPerCoin(int coins) const; 
+	void print(ostream & out) const;
 };
 #endif

@@ -5,15 +5,21 @@
 #include <iostream>
 #include <fstream>
 #include <vector>
-class Deck {
+#include "Card.h"
+
+ class Deck : public std::vector<Card> {
+	 int top = 0;
+	 Deck* deck;
+
 
 public:
-    //constructor to reconstruct deck from file
-    Deck( const istream&, CardFactory* );
-    //returns and removes the top card from the deck
-    Card* draw();
+	 Deck();
+	 //constructor to reconstruct deck from file
+	 // Deck( const istream&, CardFactory* );
+	 //returns and removes the top card from the deck
+	 Card* draw();
+	 //need insertion operator to insert all cards the cards in the deck to an std::ostream
+	 //ostream& operator<<(ostream& os);
+ };
 
-    //need insertion operator to insert all cards the cards in the deck to an std::ostream
-
-};
 

@@ -2,9 +2,9 @@
 
 #include "Deck.h"
 #include "SaveGame.h"
-SaveGame::SaveGame(){}
+//SaveGame::SaveGame(){}
 
-bool SaveGame::saveDeck(Deck<Card> deck){
+/*bool SaveGame::saveDeck(Deck<Card> deck){
     std::ofstream outputFile;
     outputFile.open("SaveDeck.txt");
     if(outputFile.fail()){return false;}
@@ -39,9 +39,9 @@ bool SaveGame::loadPlayers(){
     getline(inputFile,input);
     input.erase(input.find("Number of Players;"), input.find(":") + 1);
     /* For each player... */
-    for (int pl = 0; pl < playerCount; pl++){
+   /* for (int pl = 0; pl < playerCount; pl++){
         /* Get Name: */
-        getline(inputFile, input);
+       /* getline(inputFile, input);
         input.erase(input.find(":"));
         std::string name = input;
         getline(inputFile,input);
@@ -52,5 +52,5 @@ bool SaveGame::loadPlayers(){
             input.erase(0, input.find("") + 2)
             numCards++;
         }
-    }
-}
+    }*/
+//}

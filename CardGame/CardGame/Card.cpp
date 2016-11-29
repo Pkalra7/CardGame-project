@@ -5,6 +5,6 @@
 
 using namespace std;
 
-string Card::getName(){
+string Card::getName() const{
 	return cardName;
 }

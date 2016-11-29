@@ -6,7 +6,7 @@ Quartz::Quartz() :Card() {
 	cardName = "Quartz";
 }
 
-int Quartz::getCardsPerCoin(int coins) {
+int Quartz::getCardsPerCoin(int coins) const{
 
 	//Quartz 4 6 8 10
 
@@ -35,10 +35,10 @@ int Quartz::getCardsPerCoin(int coins) {
 	}
 }
 
-void Quartz::print(ostream& out) {
+void Quartz::print(ostream& out) const{
 	char quart = 'Q';
 	out.clear();
-	out.put(Quart);
+	out.put(quart);
 }
 
 
