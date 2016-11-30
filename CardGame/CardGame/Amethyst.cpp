@@ -6,9 +6,7 @@ Amethyst::Amethyst() : Card() {
 }
 
 void Amethyst::print(ostream& out) const{
-	char ameth = 'A';
-	out.clear();
-	out.put(ameth);
+	out << "a"; 
 }
 
 int Amethyst::getCardsPerCoin(int coins) const {

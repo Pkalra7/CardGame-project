@@ -1,7 +1,15 @@
 #include <iostream>
 #include "CardFactory.h"
 
+
 using namespace std;
+
+ostream& operator<<(ostream& os, Deck& deck) {
+	for (auto card : deck) {
+		os << card->getName().c_str() << endl;
+	}
+	return os;
+}
 int main(int narg, char *args[]){
 
 	//Testing to see if Get Deck works and to see if it has all the cards we need
@@ -17,9 +25,14 @@ int main(int narg, char *args[]){
 		i++;
 	}
 
+	Card* removed = dec.draw();
+	cout << removed->getName();
+
+	ofstream outfile("deckkkk.txt");
+	outfile << dec << endl;;
+
 	int s;
 	cin >> s;
-
 	
     /*Deck<shared_ptr<Card>>deck;
     Table table;

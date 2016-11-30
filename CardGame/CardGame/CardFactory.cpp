@@ -1,8 +1,8 @@
-#include "CardFactory.h"
 #include <iostream>
 #include <algorithm>
 #include <random>
 #include <chrono> 
+#include "CardFactory.h"
 #include "Card.h"
 #include "Ruby.h"
 #include "Quartz.h"
@@ -89,8 +89,10 @@ Deck CardFactory::getDeck() {
 		newDeck.push_back(e);
 	}
 
+
 	unsigned seed = std::chrono::system_clock::now().time_since_epoch().count();
 	std::shuffle(newDeck.begin(), newDeck.end(), std::default_random_engine(seed));
+	
 	return newDeck;
 }
 	/*
@@ -106,4 +108,6 @@ Deck CardFactory::getDeck() {
 	*/
 	
 
-//}
+
+
+//Initilization of static const members of a class can't happen within that cpp....has to be done outside. 
