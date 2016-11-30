@@ -1,21 +1,19 @@
 #include "Hematite.h"
 
-Hematite::Hematite() {
-	
-	cardName = "Hematite";
+Hematite::Hematite() : Card() {
 
+	cardName = "Hematite";
 }
 
-void Hematite::print(ostream& out) const{
+void Hematite::print(ostream& out) const {
 	char hemat = 'H';
 	out.clear();
 	out.put(hemat);
 }
 
-int Hematite::getCardsPerCoin(int coins) const{
+int Hematite::getCardsPerCoin(int coins) const {
 
-	//Hemamtite 3 6 8 9
-
+	//Hematite 3 6 8 9
 
 	int c = coins;
 
@@ -39,4 +37,5 @@ int Hematite::getCardsPerCoin(int coins) const{
 		return 9;
 		break;
 	}
+
 }

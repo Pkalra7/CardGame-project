@@ -7,20 +7,18 @@
 #include <vector>
 #include "Deck.h"
 
-
-
 //Singleton class!
 class CardFactory {
 	static int count;
 	CardFactory();
-	Deck newDeck;
+	
 public:
-
+	Deck newDeck;
     //returns a pointer to the only instance of CardFactory
     static CardFactory* getFactory();
 	~CardFactory();
 	//Use std::shuffle for returning a reaaranged deck each time getDeck is called
-	Deck& getDeck();
+	Deck getDeck();
 
 
 	

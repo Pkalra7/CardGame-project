@@ -33,9 +33,6 @@
     <ClCompile Include="Obsidian.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Hematite.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="Malachite.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -52,6 +49,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Deck.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Hematite.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -86,9 +86,6 @@
     <ClInclude Include="TradeArea.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Hematite.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="Obsidian.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -108,6 +105,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Quartz.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Hematite.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

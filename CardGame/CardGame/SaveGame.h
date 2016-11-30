@@ -13,7 +13,7 @@ class SaveGame{
     /* Stores the current card positions in the game */
    // Table table;
     /* Stores the current deck used in the game */
-    Deck<Card> deck;
+//    Deck<Card> deck;
 
 
 public:

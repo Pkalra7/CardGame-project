@@ -1,14 +1,25 @@
 #include <iostream>
 #include "CardFactory.h"
-#include "Deck.h"
-#include "Card.h"
 
+using namespace std;
 int main(int narg, char *args[]){
 
+	//Testing to see if Get Deck works and to see if it has all the cards we need
 
 	CardFactory * cf = CardFactory::getFactory();
-	int n;
-	cin >> n;
+	
+
+	Deck dec=cf->getDeck();
+	int i = 1;
+	for (Deck::iterator iter = dec.begin(); iter != dec.end(); iter++)
+	{
+		cout << i << ". " << (*iter)->getName() << " " << endl;
+		i++;
+	}
+
+	int s;
+	cin >> s;
+
 	
     /*Deck<shared_ptr<Card>>deck;
     Table table;
