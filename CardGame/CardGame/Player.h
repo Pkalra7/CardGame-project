@@ -6,6 +6,10 @@
 #include <fstream>
 #include <vector>
 class Player {
+protected:
+    string name;
+    int numCoins;
+    int numChains;
 
 public:
     //Constructor that creates a player with a given name

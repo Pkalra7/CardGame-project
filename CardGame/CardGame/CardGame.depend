@@ -1,0 +1,15 @@
+# depslib dependency file v1.0
+1480538371 source:c:\users\ishaaq\documents\school\year3semester 1\csi2372\project2\cardgame-project\cardgame\cardgame\amethyst.cpp
+	"Amethyst.h"
+
+1480351381 c:\users\ishaaq\documents\school\year3semester 1\csi2372\project2\cardgame-project\cardgame\cardgame\amethyst.h
+	"Card.h"
+
+1480351381 c:\users\ishaaq\documents\school\year3semester 1\csi2372\project2\cardgame-project\cardgame\cardgame\card.h
+	<string>
+	<iostream>
+
+1480351381 source:c:\users\ishaaq\documents\school\year3semester 1\csi2372\project2\cardgame-project\cardgame\cardgame\card.cpp
+	"Card.h"
+	<string>
+

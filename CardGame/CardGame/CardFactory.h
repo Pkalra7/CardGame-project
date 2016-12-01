@@ -5,24 +5,24 @@
 #include <iostream>
 #include <fstream>
 #include <vector>
-#include <deck>
+#include "Deck.h"
 //Singleton class!
 class CardFactory {
 	static int count;
 	static CardFactory *obj;
-	CardFactory();
-	~ CardFactory();
+
 
 	//Need a deck here, not sure of how to implement a templated one.
 	//deck newDeck;
 public:
+    ~ CardFactory();
     //returns a pointer to the only instance of CardFactory
     static CardFactory* getFactory();
     //Note that the 104 gemstone cards are always the same but their
     //order in the deck needs to be different every time.
     //Use std::shuffle to achieve this.
 
-	/* 
+	/*
 	Fill Deck with 104 cards
 	20 Quartz
 	18 Hematite
@@ -34,6 +34,8 @@ public:
 	6 Emerald
 	*/
     Deck getDeck();
-	
+private:
+    CardFactory();
+
 
 };

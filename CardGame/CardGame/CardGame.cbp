@@ -27,18 +27,37 @@
 				<Option compiler="gcc" />
 			</Target>
 		</Build>
+		<Unit filename="Amethyst.cpp" />
+		<Unit filename="Amethyst.h" />
+		<Unit filename="Card.cpp" />
 		<Unit filename="Card.h" />
+		<Unit filename="CardFactory.cpp" />
 		<Unit filename="CardFactory.h" />
 		<Unit filename="Chain.h" />
 		<Unit filename="Deck.h" />
 		<Unit filename="DiscardPile.h" />
+		<Unit filename="Emerald.cpp" />
+		<Unit filename="Emerald.h" />
 		<Unit filename="Hand.h" />
+		<Unit filename="Hematite.cpp" />
+		<Unit filename="Hematite.h" />
 		<Unit filename="Main.cpp" />
+		<Unit filename="Malachite.cpp" />
+		<Unit filename="Malachite.h" />
+		<Unit filename="Obsidian.cpp" />
+		<Unit filename="Obsidian.h" />
+		<Unit filename="Player.cpp" />
 		<Unit filename="Player.h" />
+		<Unit filename="Quartz.cpp" />
+		<Unit filename="Quartz.h" />
+		<Unit filename="Ruby.cpp" />
+		<Unit filename="Ruby.h" />
 		<Unit filename="SaveGame.cpp" />
 		<Unit filename="SaveGame.h" />
 		<Unit filename="Table.h" />
 		<Unit filename="TradeArea.h" />
+		<Unit filename="Turquoise.cpp" />
+		<Unit filename="Turquoise.h" />
 		<Extensions>
 			<code_completion />
 			<envvars />

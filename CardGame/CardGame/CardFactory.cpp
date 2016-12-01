@@ -27,3 +27,6 @@ CardFactory::getDeck() {
 	6 Emerald
 	*/
 }
+CardFactory::CardFactory() {
+    cout << "In construtor ..." << endl;
+}
