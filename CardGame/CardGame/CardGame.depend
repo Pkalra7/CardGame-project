@@ -1,0 +1,102 @@
+# depslib dependency file v1.0
+1480551382 source:c:\users\ishaaq\documents\school\year3semester 1\csi2372\project2\cardgame-project\cardgame\cardgame\main.cpp
+	<iostream>
+	"CardFactory.h"
+
+1480551382 c:\users\ishaaq\documents\school\year3semester 1\csi2372\project2\cardgame-project\cardgame\cardgame\cardfactory.h
+	<iostream>
+	<fstream>
+	<vector>
+	"Deck.h"
+
+1480551382 c:\users\ishaaq\documents\school\year3semester 1\csi2372\project2\cardgame-project\cardgame\cardgame\deck.h
+	<iostream>
+	<fstream>
+	<vector>
+	"Card.h"
+	"Ruby.h"
+
+1480551382 c:\users\ishaaq\documents\school\year3semester 1\csi2372\project2\cardgame-project\cardgame\cardgame\card.h
+	<string>
+	<iostream>
+
+1480551382 c:\users\ishaaq\documents\school\year3semester 1\csi2372\project2\cardgame-project\cardgame\cardgame\ruby.h
+	"Card.h"
+
+1480551382 source:c:\users\ishaaq\documents\school\year3semester 1\csi2372\project2\cardgame-project\cardgame\cardgame\savegame.cpp
+	"Deck.h"
+	"SaveGame.h"
+
+1480551382 c:\users\ishaaq\documents\school\year3semester 1\csi2372\project2\cardgame-project\cardgame\cardgame\savegame.h
+	<iostream>
+	<fstream>
+	<vector>
+
+1480551382 source:c:\users\ishaaq\documents\school\year3semester 1\csi2372\project2\cardgame-project\cardgame\cardgame\amethyst.cpp
+	"Amethyst.h"
+
+1480551382 c:\users\ishaaq\documents\school\year3semester 1\csi2372\project2\cardgame-project\cardgame\cardgame\amethyst.h
+	"Card.h"
+
+1480551382 source:c:\users\ishaaq\documents\school\year3semester 1\csi2372\project2\cardgame-project\cardgame\cardgame\card.cpp
+	"Card.h"
+	<string>
+
+1480551382 source:c:\users\ishaaq\documents\school\year3semester 1\csi2372\project2\cardgame-project\cardgame\cardgame\cardfactory.cpp
+	<iostream>
+	<algorithm>
+	<random>
+	<chrono>
+	"CardFactory.h"
+	"Card.h"
+	"Ruby.h"
+	"Quartz.h"
+	"Hematite.h"
+	"Obsidian.h"
+	"Malachite.h"
+	"Turquoise.h"
+	"Amethyst.h"
+	"Emerald.h"
+
+1480551382 c:\users\ishaaq\documents\school\year3semester 1\csi2372\project2\cardgame-project\cardgame\cardgame\quartz.h
+	"Card.h"
+
+1480551382 c:\users\ishaaq\documents\school\year3semester 1\csi2372\project2\cardgame-project\cardgame\cardgame\hematite.h
+	"Card.h"
+
+1480551382 c:\users\ishaaq\documents\school\year3semester 1\csi2372\project2\cardgame-project\cardgame\cardgame\obsidian.h
+	"Card.h"
+
+1480551382 c:\users\ishaaq\documents\school\year3semester 1\csi2372\project2\cardgame-project\cardgame\cardgame\malachite.h
+	"Card.h"
+
+1480551382 c:\users\ishaaq\documents\school\year3semester 1\csi2372\project2\cardgame-project\cardgame\cardgame\turquoise.h
+	"Card.h"
+
+1480551382 c:\users\ishaaq\documents\school\year3semester 1\csi2372\project2\cardgame-project\cardgame\cardgame\emerald.h
+	"Card.h"
+
+1480551382 source:c:\users\ishaaq\documents\school\year3semester 1\csi2372\project2\cardgame-project\cardgame\cardgame\deck.cpp
+	"Deck.h"
+
+1480551382 source:c:\users\ishaaq\documents\school\year3semester 1\csi2372\project2\cardgame-project\cardgame\cardgame\emerald.cpp
+	"Emerald.h"
+
+1480551382 source:c:\users\ishaaq\documents\school\year3semester 1\csi2372\project2\cardgame-project\cardgame\cardgame\hematite.cpp
+	"Hematite.h"
+
+1480551382 source:c:\users\ishaaq\documents\school\year3semester 1\csi2372\project2\cardgame-project\cardgame\cardgame\malachite.cpp
+	"Malachite.h"
+
+1480551382 source:c:\users\ishaaq\documents\school\year3semester 1\csi2372\project2\cardgame-project\cardgame\cardgame\quartz.cpp
+	"Quartz.h"
+
+1480551382 source:c:\users\ishaaq\documents\school\year3semester 1\csi2372\project2\cardgame-project\cardgame\cardgame\ruby.cpp
+	"Ruby.h"
+
+1480551382 source:c:\users\ishaaq\documents\school\year3semester 1\csi2372\project2\cardgame-project\cardgame\cardgame\turquoise.cpp
+	"Turquoise.h"
+
+1480551382 source:c:\users\ishaaq\documents\school\year3semester 1\csi2372\project2\cardgame-project\cardgame\cardgame\obsidian.cpp
+	"Obsidian.h"
+
