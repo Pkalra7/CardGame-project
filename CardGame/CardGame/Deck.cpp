@@ -7,4 +7,4 @@ Card* Deck::draw() {
 		return toBeDrawn;
 	}
 }
-	
+
