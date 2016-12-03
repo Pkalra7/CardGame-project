@@ -1,38 +1,53 @@
 #include <iostream>
+#include "Deck.h"
 #include "CardFactory.h"
 
 
 using namespace std;
 
-ostream& operator<<(ostream& os, Deck& deck) {
+ostream& operator<<(ostream& os, const Deck& deck) {
 	for (auto card : deck) {
 		os << card->getName().c_str() << endl;
 	}
+
+	os << deck.top << endl;
 	return os;
 }
 int main(int narg, char *args[]){
 
 	//Testing to see if Get Deck works and to see if it has all the cards we need
-
+	
 	CardFactory * cf = CardFactory::getFactory();
 	
+	
+	Deck dec = cf->getDeck();
 
-	Deck dec=cf->getDeck();
-	int i = 1;
+	int i= 1;
+
+	Card* removed = dec.draw();
 	for (Deck::iterator iter = dec.begin(); iter != dec.end(); iter++)
 	{
 		cout << i << ". " << (*iter)->getName() << " " << endl;
 		i++;
 	}
-
-	Card* removed = dec.draw();
 	cout << removed->getName();
+	
 
 	ofstream outfile("deckkkk.txt");
-	outfile << dec << endl;;
+	outfile << dec << endl;
+	outfile.close();
 
+	ifstream infile("deckkkk.txt");
+	
+	Deck test(infile, cf);
+
+	infile.close();
+	
 	int s;
 	cin >> s;
+
+	
+
 	
     /*Deck<shared_ptr<Card>>deck;
     Table table;

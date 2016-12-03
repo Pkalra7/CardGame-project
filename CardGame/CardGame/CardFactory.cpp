@@ -14,8 +14,10 @@
 #include "Emerald.h"
 
 using namespace std;
-
+CardFactory* CardFactory::factory = nullptr;
+Deck CardFactory::newDeck;
 int CardFactory::count = 0;
+
 
 
 CardFactory::CardFactory() {
@@ -25,9 +27,13 @@ CardFactory::CardFactory() {
 
 CardFactory* CardFactory::getFactory() {
 	if (count == 0) {
-		CardFactory * obj = new CardFactory();
+		factory = new CardFactory();
 		cout << "cardfactory created" << endl;
-		return obj;
+		return factory;
+	}
+	else {
+		std::cerr << "Cardfactory already exists:\n";
+		exit(1);
 	}
 }
 

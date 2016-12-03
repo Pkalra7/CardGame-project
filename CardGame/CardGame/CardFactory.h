@@ -1,19 +1,23 @@
 #ifndef CARDFACTORY_H
 #define CARDFACTORY_H
-#endif // CARDFACTORY_H
+
 
 #include <iostream>
 #include <fstream>
 #include <vector>
+#include <string>
 #include "Deck.h"
 
+class Deck;
 //Singleton class!
 class CardFactory {
 	static int count;
 	CardFactory();
+	static Deck newDeck;
+	static CardFactory* factory;
 	
 public:
-	Deck newDeck;
+	
     //returns a pointer to the only instance of CardFactory
     static CardFactory* getFactory();
 	~CardFactory();
@@ -37,3 +41,4 @@ public:
 	
 
 };
+#endif
