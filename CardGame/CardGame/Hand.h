@@ -1,10 +1,11 @@
 #ifndef HAND_H
 #define HAND_H
-#endif // HAND_H
+
 
 #include <iostream>
 #include <fstream>
 #include <vector>
+#include "CardFactory.h"
 class Hand {
 public:
     //Adds the card to the rear of the hand
@@ -21,4 +22,4 @@ public:
     Hand( const istream&, CardFactory* );
 
 };
-
+#endif // HAND_H

@@ -1,6 +1,6 @@
 #ifndef CHAIN_H
 #define CHAIN_H
-#endif // CHAIN_H
+
 
 #include <iostream>
 #include <fstream>
@@ -21,3 +21,4 @@ public:
     //Constructor of Chain. Reconstructed using istream
     //Chain( const istream&, CardFactory* );
 };
+#endif // CHAIN_H
