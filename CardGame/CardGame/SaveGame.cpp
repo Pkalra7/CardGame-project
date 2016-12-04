@@ -14,6 +14,7 @@
     }
     return true;
 }
+
 bool SaveGame::loadDeck(){
     std::ifstream inputFile;
     inputFile.open("SaveDeck.txt");

@@ -41,6 +41,51 @@ CardFactory::~CardFactory() {
 	 
 }
 
+Card* CardFactory::getCard(char cardtype) {
+	Card * type = nullptr;
+
+	switch (cardtype) {
+	case('Q'):
+		type = new Quartz();
+		return type;
+		break;
+	case('A'):
+		type = new Amethyst();
+		return type;
+		break;
+	case('O'):
+		type = new Obsidian();
+		return type;
+		break;
+	case('H'):
+		type = new Hematite();
+		return type;
+		break;
+	case('M'):
+		type = new Malachite();
+		return type;
+		break;
+	case('E'):
+		type = new Emerald();
+		return type;
+		break;
+	case('R'):
+		type = new Ruby();
+		return type;
+		break;
+	case('T'):
+		type = new Turquoise();
+		return type;
+		break;
+	default:
+		return nullptr;
+	}
+
+		
+
+	}
+
+
 /*
 Fill Deck with 104 cards
 20 Quartz
@@ -50,8 +95,8 @@ Fill Deck with 104 cards
 12 Turqouise
 10 Ruby
 8 Amethyst
-6 Emerald
-*/
+6 Emerald*/
+
 
 Deck CardFactory::getDeck() {
 

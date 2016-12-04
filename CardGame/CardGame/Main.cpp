@@ -3,11 +3,13 @@
 #include "CardFactory.h"
 
 
-using namespace std;
+using namespace std; 
+
 
 ostream& operator<<(ostream& os, const Deck& deck) {
 	for (auto card : deck) {
-		os << card->getName().c_str() << endl;
+		 card->print(os);
+		 os << "\n";
 	}
 
 	os << deck.top << endl;
@@ -42,6 +44,14 @@ int main(int narg, char *args[]){
 	Deck test(infile, cf);
 
 	infile.close();
+
+	for (Deck::iterator iter = test.begin(); iter != test.end(); iter++)
+	{
+		cout << i << ". " << (*iter)->getName() << " " << endl;
+		i++;
+	}
+
+	
 	
 	int s;
 	cin >> s;
