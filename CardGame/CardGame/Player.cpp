@@ -15,11 +15,12 @@ string Player::getName(){
 int Player::getNumCoins(){
     return numCoins;
 }
+
 int Player::getMaxNumChains(){
     return maxChainCount;
 }
 int Player::getNumChains(){
-    return numChains();
+    return numChains;
 }
 void Player::buyThirdChain(){
     if (numCoins >= 2){
@@ -31,4 +32,10 @@ void Player::buyThirdChain(){
             numChains++;
         }
     }
+}
+Player& Player::operator+=(int coins){
+    numCoins += coins;
+    Player newPlayer(name);
+    newPlayer.numCoins = numCoins;
+    return newPlayer;
 }
