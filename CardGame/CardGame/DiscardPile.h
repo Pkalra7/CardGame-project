@@ -5,12 +5,16 @@
 #include <iostream>
 #include <fstream>
 #include <vector>
+#include "Card.h"
+#include "CardFactory.h"
 
-class DiscardPile{
+using namespace std;
+
+class DiscardPile: public vector<Card*> {
 
 public:
     //Discards the card to the pile
-    //DiscardPile& operator+=( Card* )
+	DiscardPile& operator+=(Card*);
 
     //returns and removes the top card from the discard pile
     Card* pickUp();
@@ -21,5 +25,5 @@ public:
     //insertion operator to insert only the top card of the discard pile to an std::ostream
 
     //constructor which accepts an istream and reconstructs the discard pile from the file
-    DiscardPile( const istream&, CardFactory* );
+    DiscardPile(istream&, CardFactory* );
 };

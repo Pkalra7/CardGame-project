@@ -114,6 +114,7 @@
     <ClCompile Include="Card.cpp" />
     <ClCompile Include="CardFactory.cpp" />
     <ClCompile Include="Deck.cpp" />
+    <ClCompile Include="DiscardPile.cpp" />
     <ClCompile Include="Emerald.cpp" />
     <ClCompile Include="Hematite.cpp" />
     <ClCompile Include="Main.cpp" />
@@ -122,6 +123,7 @@
     <ClCompile Include="Quartz.cpp" />
     <ClCompile Include="Ruby.cpp" />
     <ClCompile Include="SaveGame.cpp" />
+    <ClCompile Include="TradeArea.cpp" />
     <ClCompile Include="Turquoise.cpp" />
   </ItemGroup>
   <ItemGroup>
