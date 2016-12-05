@@ -35,3 +35,6 @@ void DiscardPile::print(ostream& os) {
 		os << "\n";
 	}
 }
+ostream& operator<<(ostream& os, DiscardPile& dp) {
+	os << dp.top();
+}

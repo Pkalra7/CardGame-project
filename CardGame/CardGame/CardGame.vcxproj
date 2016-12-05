@@ -124,6 +124,7 @@
     <ClCompile Include="Quartz.cpp" />
     <ClCompile Include="Ruby.cpp" />
     <ClCompile Include="SaveGame.cpp" />
+    <ClCompile Include="Table.cpp" />
     <ClCompile Include="TradeArea.cpp" />
     <ClCompile Include="Turquoise.cpp" />
   </ItemGroup>

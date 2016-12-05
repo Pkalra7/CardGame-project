@@ -1,12 +1,10 @@
 #ifndef PLAYER_H
 #define PLAYER_H
-#endif // PLAYER_H
 
 #include <iostream>
 #include <fstream>
 #include <vector>
 #include <string>
-
 #include "Card.h"
 #include "Chain.h"
 #include "Hand.h"
@@ -15,7 +13,7 @@ class Player {
 protected:
     int numCoins = 0;
     std::string name;
-    Chain* chain;
+	Chain* chain;
     Hand* hand;
     int numChains = 0;
     int maxChainCount = 0;
@@ -43,7 +41,8 @@ public:
     //and prints the full hand (if bool is true) to the ostream
     void printHand(std::ostream&, bool);
     //Insertion operator to print Player to ostream goes here
+	friend ostream& operator<<(std::ostream&, Player&);
     //Constructor which accepts istream and reconstructs Player
-    Player( const istream&, CardFactory* );
+    Player(istream&, CardFactory* );
 };
-
+#endif // PLAYER_H

@@ -1,6 +1,6 @@
 #ifndef DISCARDPILE_H
 #define DISCARDPILE_H
-#endif // DISCARDPILE_H
+
 
 #include <iostream>
 #include <fstream>
@@ -23,7 +23,8 @@ public:
     //insert all cards in the DiscardPile to an std::ostream
     void print( std::ostream& );
     //insertion operator to insert only the top card of the discard pile to an std::ostream
-
+	friend ostream& operator<<(ostream& os, DiscardPile& dp);
     //constructor which accepts an istream and reconstructs the discard pile from the file
     DiscardPile(istream&, CardFactory* );
 };
+#endif // DISCARDPILE_H
