@@ -35,7 +35,5 @@ void Player::buyThirdChain(){
 }
 Player& Player::operator+=(int coins){
     numCoins += coins;
-    Player newPlayer(name);
-    newPlayer.numCoins = numCoins;
-    return newPlayer;
+    return *this;
 }
