@@ -7,7 +7,7 @@ bool Table::win(std::string& winner) {
 	Player p2 = players[1];
 	//Checking to see if draw returns a null card. Can't use top variable
 	if (d.draw() == 0) {
-		if (p1.getNumCoins > p2.getNumCoins) {
+		if (p1.getNumCoins() > p2.getNumCoins()) {
 			winner = p1.getName();
 		}
 		else {

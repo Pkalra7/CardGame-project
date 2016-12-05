@@ -51,7 +51,7 @@ void Player::printHand(std::ostream& os, bool printHand) {
 }
 ostream& operator<<(std::ostream& os, Player& p) {
 	os << p.getName() << endl;
-	os << p.getNumCoins << endl;
+	os << p.getNumCoins() << endl;
 	// os << Chain c;
 	return os;
 }
