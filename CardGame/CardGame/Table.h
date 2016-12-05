@@ -5,10 +5,16 @@
 #include <iostream>
 #include <fstream>
 #include <vector>
+#include "Player.h"
+#include "Deck.h"
+#include "DiscardPile.h"
+#include "TradeArea.h"
+
 
 //Table will manage all the game components. It will hold two objects of type Player, the Deck and the
 //DiscardPile, as well as the TradeArea.
 class Table{
+	
 
 public:
     //Returns true when a player has won. The name of the player is returned by reference

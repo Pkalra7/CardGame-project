@@ -21,6 +21,8 @@ public:
     //returns a pointer to the only instance of CardFactory
     static CardFactory* getFactory();
 	~CardFactory();
+
+	Card* getCard(char type);
 	//Use std::shuffle for returning a reaaranged deck each time getDeck is called
 	Deck getDeck();
 

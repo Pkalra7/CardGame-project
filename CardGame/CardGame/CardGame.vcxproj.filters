@@ -54,6 +54,15 @@
     <ClCompile Include="Hematite.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="DiscardPile.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TradeArea.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Player.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="SaveGame.h">

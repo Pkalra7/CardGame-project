@@ -4,14 +4,15 @@ Deck::Deck() {
 }
 
 Deck::Deck(istream& is, CardFactory* cf){
-	std::string type;
+	char type;
 	if (!is) {
 		std::cerr << "Error opening file :\n";
 		//exit(1);
 	}
 
 	while (is >> type) {
-		std::cout << type << endl;
+		Card* toBeInserted = cf->getCard(type);
+		this->push_back(toBeInserted);
 	}
 }
 
