@@ -9,11 +9,8 @@
 #include "Ruby.h"
 #include "CardFactory.h"
 class CardFactory;
-class Deck: public std::vector<Card*> {
+class Deck: public vector<Card*> {
 	 int top = 0;   ///
-
-	 
-	
 public:
 	 Deck();
 	 //constructor to reconstruct deck from file
@@ -22,6 +19,7 @@ public:
 	 Card* draw();
 	 //insertion operator to insert all cards the cards in the deck to an std::ostream
 	 friend ostream& operator<<(ostream&,  const Deck&);
+	  
 	
 	 //Deck getDeck();
  };

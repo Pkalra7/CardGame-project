@@ -7,7 +7,7 @@ Deck::Deck(istream& is, CardFactory* cf){
 	char type;
 	if (!is) {
 		std::cerr << "Error opening file :\n";
-		//exit(1);
+		exit(1);
 	}
 
 	while (is >> type) {
@@ -25,6 +25,14 @@ Card* Deck::draw() {
 		this->top--;
 		return toBeDrawn;
 	}
+}
+
+ostream& operator<<(ostream& os, const Deck& deck) {
+	for (auto card : deck) {
+		card->print(os);
+		os << "\n";
+	}
+	return os;
 }
 
 
