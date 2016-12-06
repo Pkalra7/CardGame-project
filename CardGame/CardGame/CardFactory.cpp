@@ -38,7 +38,10 @@ CardFactory* CardFactory::getFactory() {
 }
 
 CardFactory::~CardFactory() {
-	 
+	for (Deck::iterator iter = newDeck.begin(); iter != newDeck.end(); iter++)
+	{
+		delete *iter;
+	}
 }
 
 Card* CardFactory::getCard(char cardtype) {
@@ -46,56 +49,72 @@ Card* CardFactory::getCard(char cardtype) {
 
 	switch (cardtype) {
 	case('Q'):
-		type = new Quartz();
+		if (quartzCounter < 21) {
+			type = new Quartz();
+			newDeck.push_back(type);
+			quartzCounter++;
+		}
 		return type;
 		break;
 	case('A'):
-		type = new Amethyst();
+		if (amethystCounter < 9) {
+			type = new Amethyst();
+			newDeck.push_back(type);
+			amethystCounter++;
+		}
 		return type;
 		break;
 	case('O'):
-		type = new Obsidian();
+		if (obsidianCounter < 17) {
+			type = new Obsidian();
+			newDeck.push_back(type);
+			obsidianCounter++;
+		}
 		return type;
 		break;
 	case('H'):
-		type = new Hematite();
+		if (hematiteCounter < 19) {
+			type = new Hematite();
+			newDeck.push_back(type);
+			hematiteCounter++;
+		}
 		return type;
 		break;
 	case('M'):
-		type = new Malachite();
+		if (malachiteCounter < 15) {
+			type = new Malachite();
+			newDeck.push_back(type);
+			malachiteCounter++;
+		}
 		return type;
 		break;
 	case('E'):
-		type = new Emerald();
+		if (emeraldCounter < 7) {
+			type = new Emerald();
+			newDeck.push_back(type);
+			emeraldCounter++;
+		}
 		return type;
 		break;
 	case('R'):
-		type = new Ruby();
+		if (rubyCounter < 11) {
+			type = new Ruby();
+			newDeck.push_back(type);
+			rubyCounter++;
+		}
 		return type;
 		break;
 	case('T'):
-		type = new Turquoise();
+		if (turquoiseCounter < 13) {
+			type = new Turquoise();
+			newDeck.push_back(type);
+			turquoiseCounter++;
+		}
 		return type;
 		break;
-	default:
-		return nullptr;
 	}
 
-		
-
 	}
-
-
-/*
-Fill Deck with 104 cards
-20 Quartz
-18 Hematite
-16 Obsidian
-14 Malachite
-12 Turqouise
-10 Ruby
-8 Amethyst
-6 Emerald*/
 
 
 Deck CardFactory::getDeck() {
@@ -103,41 +122,49 @@ Deck CardFactory::getDeck() {
 	for (int i = 0;i < 20;i++) {
 		Card* q = new Quartz();
 		newDeck.push_back(q);
+		quartzCounter = 20;
 	}
 
 	for (int i = 0;i < 18;i++) {
 		Card* h = new Hematite();
 		newDeck.push_back(h);
+		hematiteCounter = 18;
 	}
 
 	for (int i = 0;i < 16; i++){
 		Card* o=new Obsidian();
 		newDeck.push_back(o);
+		obsidianCounter = 16;
 	}
 
 	for (int i = 0; i < 14; i++) {
 		Card* m = new Malachite();
 		newDeck.push_back(m);
+		malachiteCounter = 14;
 	}
 
 	for (int i = 0;i < 12; i++) {
 		Card * t = new Turquoise();
 		newDeck.push_back(t);
+		turquoiseCounter = 12;
 	}
 
 	for (int i = 0;i < 10;i++) {
 		Card * r = new Ruby();
 		newDeck.push_back(r);
+		rubyCounter = 10;
 	}
 
 	for (int i = 0; i < 8;i++) {
 		Card* a = new Amethyst();
 		newDeck.push_back(a);
+		amethystCounter = 8;
 	}
 
 	for (int i = 0; i < 6; i++) {
 		Card* e = new Emerald();
 		newDeck.push_back(e);
+		emeraldCounter = 6;
 	}
 
 

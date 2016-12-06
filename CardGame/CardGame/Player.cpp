@@ -7,22 +7,22 @@ using namespace std;
 Player::Player(const string& name1){
     name = name1;
 }
-string Player::getName(){
+string Player::getName()const{
     return name;
 }
-int Player::getNumCoins(){
+int Player::getNumCoins()const{
     return numCoins;
 }
-int Player::getMaxNumChains(){
+int Player::getMaxNumChains()const{
     return maxChainCount;
 }
-int Player::getNumChains(){
+int Player::getNumChains()const{
     return numChains;
 }
 Chain& Player::operator[](int i) {
 	return *chain;
 }
-Player& Player::operator+=(int coins) {
+Player& Player::operator+=(const int coins) {
 	numCoins += coins;
 	return *this;
 }
@@ -49,7 +49,7 @@ void Player::printHand(std::ostream& os, bool printHand) {
 		//os << hand << endl;
 	}
 }
-ostream& operator<<(std::ostream& os, Player& p) {
+ostream& operator<<(std::ostream& os, const Player& p) {
 	os << p.getName() << endl;
 	os << p.getNumCoins() << endl;
 	// os << Chain c;

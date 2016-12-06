@@ -6,15 +6,6 @@
 using namespace std; 
 
 
-ostream& operator<<(ostream& os, const Deck& deck) {
-	for (auto card : deck) {
-		 card->print(os);
-		 os << "\n";
-	}
-
-	os << deck.top << endl;
-	return os;
-}
 int main(int narg, char *args[]){
 
 	//Testing to see if Get Deck works and to see if it has all the cards we need
@@ -22,7 +13,7 @@ int main(int narg, char *args[]){
 	CardFactory * cf = CardFactory::getFactory();
 	
 	
-	Deck dec = cf->getDeck();
+	/*Deck dec = cf->getDeck();
 
 	int i= 1;
 
@@ -37,10 +28,10 @@ int main(int narg, char *args[]){
 
 	ofstream outfile("deckkkk.txt");
 	outfile << dec << endl;
-	outfile.close();
+	outfile.close();*/
 
 	ifstream infile("deckkkk.txt");
-	
+	int i = 1;
 	Deck test(infile, cf);
 
 	infile.close();

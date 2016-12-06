@@ -22,15 +22,15 @@ public:
     //Constructor that creates a player with a given name
     Player(const std::string& );
     //Gets the name of the player
-    std::string getName();
+    std::string getName() const;
     //Gets the number of coins held by the player
-    int getNumCoins();
+    int getNumCoins() const;
     //Returns a 2 or 3
-    int getMaxNumChains();
+    int getMaxNumChains() const;
     //Returns the number of non-zero chains
-    int getNumChains();
+    int getNumChains() const;
     //Returns the chain at position i
-    Chain& operator[](int i);
+    Chain& operator[](int i) ;
     //Add a number of coins
     Player& operator+=( int );
     //Adds an empty third chain for the player in exchange for 2 coins
@@ -41,7 +41,7 @@ public:
     //and prints the full hand (if bool is true) to the ostream
     void printHand(std::ostream&, bool);
     //Insertion operator to print Player to ostream goes here
-	friend ostream& operator<<(std::ostream&, Player&);
+	friend ostream& operator<<(std::ostream&, const Player&);
     //Constructor which accepts istream and reconstructs Player
     Player(istream&, CardFactory* );
 };
