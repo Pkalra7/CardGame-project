@@ -1,12 +1,11 @@
 #ifndef HAND_H
 #define HAND_H
-
-
 #include <iostream>
 #include <fstream>
 #include <vector>
+#include <deque>
 #include "CardFactory.h"
-class Hand {
+class Hand : public deque<Card*>{
 public:
     //Adds the card to the rear of the hand
     Hand& operator+=(Card*);
@@ -17,9 +16,8 @@ public:
     //returns and removes the card at the given index
     Card* operator[](int);
     //Insertion operator goes here
-
+	friend ostream& operator<<(ostream& os, Hand& h);
     //Hand Constructor reconstructed from file
-    Hand( const istream&, CardFactory* );
-
+    Hand(istream&, CardFactory* );
 };
 #endif // HAND_H

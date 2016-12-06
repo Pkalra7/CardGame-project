@@ -6,7 +6,7 @@ using namespace std;
 
 // CARD_H
 class Card{
-	protected:
+protected:
 	string cardName;
 public:
 

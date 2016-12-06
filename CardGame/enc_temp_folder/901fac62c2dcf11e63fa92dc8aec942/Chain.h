@@ -15,10 +15,10 @@ public:
     //Chain<T>& operator+=( Card* );
     //counts the number of cards in the chain and returns the number of coins according
     //to the function Card::getCardsPerCoin
-    //int sell();
+    int sell();
     //Insertion operator to print chain on the ostream goes here
 
     //Constructor of Chain. Reconstructed using istream
-	//Chain( const istream&, CardFactory* );
+//    Chain( const istream&, CardFactory* );
 };
 #endif // CHAIN_H
