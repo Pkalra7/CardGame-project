@@ -133,6 +133,7 @@
     <ClInclude Include="Card.h" />
     <ClInclude Include="CardFactory.h" />
     <ClInclude Include="Chain.h" />
+    <ClInclude Include="Chain_base.h" />
     <ClInclude Include="Deck.h" />
     <ClInclude Include="DiscardPile.h" />
     <ClInclude Include="Emerald.h" />

@@ -37,7 +37,5 @@ int Malachite::getCardsPerCoin(int coins) const {
 }
 
 void Malachite::print(ostream& out)const {
-	char malac = 'M';
-	out.clear();
-	out.put(malac);
+	out << 'M';
 }

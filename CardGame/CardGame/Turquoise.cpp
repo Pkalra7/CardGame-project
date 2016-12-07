@@ -37,7 +37,5 @@ int Turquoise::getCardsPerCoin(int coins) const{
 }
 
 void Turquoise::print(ostream& out) const{
-	char turq = 'T';
-	out.clear();
-	out.put(turq);
+	out << 'T';
 }

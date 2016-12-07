@@ -6,9 +6,7 @@ Hematite::Hematite() : Card() {
 }
 
 void Hematite::print(ostream& out) const {
-	char hemat = 'H';
-	out.clear();
-	out.put(hemat);
+	out << 'H';
 }
 
 int Hematite::getCardsPerCoin(int coins) const {

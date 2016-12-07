@@ -36,9 +36,7 @@ int Quartz::getCardsPerCoin(int coins) const{
 }
 
 void Quartz::print(ostream& out) const{
-	char quart = 'Q';
-	out.clear();
-	out.put(quart);
+	out << 'Q';
 }
 
 

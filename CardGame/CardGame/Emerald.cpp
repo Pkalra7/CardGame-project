@@ -7,9 +7,7 @@ Emerald::Emerald() : Card() {
 }
 
 void Emerald::print(ostream& out) const{
-	char emer = 'E';
-	out.clear();
-	out.put(emer);
+	out << 'E';
 }
 
 int Emerald::getCardsPerCoin(int coins) const {

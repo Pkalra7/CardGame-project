@@ -5,9 +5,7 @@ Obsidian::Obsidian() {
 }
 
 void Obsidian::print(ostream& out) const{
-	char obsid = 'O';
-	out.clear();
-	out.put(obsid);
+	out << 'O';
 }
 
 int Obsidian::getCardsPerCoin(int coins) const{

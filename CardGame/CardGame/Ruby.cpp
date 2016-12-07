@@ -7,9 +7,7 @@ Ruby::Ruby() {
 }
 
 void Ruby::print(ostream& out) const{
-char ruby = 'R';
-out.clear();
-out.put(ruby);
+	out << 'R';
 }
 
 int Ruby::getCardsPerCoin(int coins) const{

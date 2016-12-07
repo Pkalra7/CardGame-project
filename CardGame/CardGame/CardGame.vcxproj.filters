@@ -122,5 +122,8 @@
     <ClInclude Include="Hematite.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Chain_base.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
