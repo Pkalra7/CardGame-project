@@ -1,6 +1,6 @@
 #ifndef TRADEAREA_H
 #define TRADEAREA_H
-#endif // TRADEAREA_H
+
 
 #include <iostream>
 #include <fstream>
@@ -31,4 +31,4 @@ public:
     TradeArea(istream&, CardFactory* );
 
 };
-
+#endif // TRADEAREA_H
