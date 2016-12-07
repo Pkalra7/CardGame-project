@@ -41,7 +41,7 @@ public:
     //and prints the full hand (if bool is true) to the ostream
     void printHand(std::ostream&, bool);
     //Insertion operator to print Player to ostream goes here
-	friend ostream& operator<<(std::ostream&, const Player&);
+	friend ostream& operator<<(ostream&, const Player&);
     //Constructor which accepts istream and reconstructs Player
     Player(istream&, CardFactory* );
 };

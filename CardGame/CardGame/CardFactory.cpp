@@ -46,7 +46,6 @@ CardFactory::~CardFactory() {
 
 Card* CardFactory::getCard(char cardtype) {
 	Card * type = nullptr;
-
 	switch (cardtype) {
 	case('Q'):
 		if (quartzCounter < 21) {

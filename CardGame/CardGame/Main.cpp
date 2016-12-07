@@ -1,6 +1,8 @@
 #include <iostream>
 #include "Deck.h"
 #include "CardFactory.h"
+#include "Hand.h"
+#include "Player.h"
 
 
 using namespace std; 
@@ -11,7 +13,6 @@ int main(int narg, char *args[]){
 	//Testing to see if Get Deck works and to see if it has all the cards we need
 	
 	CardFactory * cf = CardFactory::getFactory();
-	
 	
 	/*Deck dec = cf->getDeck();
 
