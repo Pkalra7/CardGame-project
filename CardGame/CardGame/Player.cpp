@@ -19,9 +19,9 @@ int Player::getMaxNumChains()const{
 int Player::getNumChains()const{
     return numChains;
 }
-Chain& Player::operator[](int i) {
-	return *chain;
-}
+/*Chain_base& Player::operator[](int i) {
+	return chain
+}*/
 Player& Player::operator+=(const int coins) {
 	numCoins += coins;
 	return *this;
