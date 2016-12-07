@@ -6,6 +6,7 @@
 using namespace std;
 
 
-class Chain_base: public vector<Card*>{};
-
+class Chain_base{}
+;
 #endif CHAIN_BASE_H
+
