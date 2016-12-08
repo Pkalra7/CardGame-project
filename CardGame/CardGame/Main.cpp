@@ -57,13 +57,13 @@ int main(int narg, char *args[]){
 	Chain<Obsidian> *cl = new Chain<Obsidian>();
 	cl->chain.push_back(tl);
 	Chain<Obsidian> cl1(*cl);
-
+	
 
 	cout << "Obsidian has been removed and added to chain" << endl;
 	
 	//cout << test;
 	cout << cl1;
-
+/*
 	cout << " " << endl;
 
 	cout << " now writing to chain.txt" << endl;
@@ -79,7 +79,7 @@ int main(int narg, char *args[]){
 	//Chain<Obsidian>*el=new Chain<Obsidian>(intest, cf);
 
 	cout << "about to print now" << endl;
-
+	*/
 
 	int s;
 	cin >> s;
