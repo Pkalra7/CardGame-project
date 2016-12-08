@@ -18,7 +18,7 @@ int Player::getMaxNumChains()const{
 }
 int Player::getNumChains()const{
 	//only print number of non-zero chains?
-    return chain.size();
+	return chain.size();
 }
 Chain_base& Player::operator[](int i) {
 	Chain_base* c = chain[i];
