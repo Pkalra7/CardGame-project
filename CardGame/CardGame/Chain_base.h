@@ -8,5 +8,5 @@ using namespace std;
 
 class Chain_base{}
 ;
-#endif CHAIN_BASE_H
+#endif //CHAIN_BASE_H
 

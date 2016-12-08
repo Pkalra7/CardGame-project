@@ -15,7 +15,7 @@ template <class T> class Chain:public Chain_base {
 public:
 	vector<T*> chain;
     //adds a card to chain
-	Chain() = default;
+	Chain<T>() = default;
     //If the run-time type does not match the template type of the chain
     //Exception type of type IllegalType needs to be raised
     Chain<T>& operator+=(const T* );
@@ -23,9 +23,9 @@ public:
     //to the function Card::getCardsPerCoin
     int sell();
     //Insertion operator to print chain on the ostream goes here
-	friend ostream& operator<<<T>(ostream& os, Chain<T>& ch);
+	friend ostream& operator<<(ostream& os, Chain<T>& ch);
     //Constructor of Chain. Reconstructed using istream
-    Chain( const istream&, CardFactory* );
+    Chain<T>(istream&, CardFactory* );
 
 };
 #endif // CHAIN_H
@@ -80,8 +80,4 @@ ostream& operator<<(ostream & os, Chain<T>& ch)
 	}
 
 	return os;
-}
-template <class T>
-Chain<T>::Chain(const istream&, CardFactory*) {
-
 }
