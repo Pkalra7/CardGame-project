@@ -13,9 +13,11 @@ Hand& Hand::operator+=(Card* c) {
 Card* Hand::top() {
 	return this->front();
 }
-//????
-//Card* Hand::operator[](int index) {
-//}
+
+Card* Hand::operator[](int index) {
+	deque<Card*> d = *this;
+	return d[index];
+}
 Hand::Hand(istream&, CardFactory*) {
 
 }

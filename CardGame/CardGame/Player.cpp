@@ -18,7 +18,7 @@ int Player::getMaxNumChains()const{
 }
 int Player::getNumChains()const{
 	//only print number of non-zero chains?
-    return chain.size();
+	return chain.size();
 }
 Chain_base& Player::operator[](int i) {
 	Chain_base* c = chain[i];
@@ -71,6 +71,10 @@ Player::Player(istream& is, CardFactory* c) {
 	else {
 		cerr << "Couldn't open file!";
 	}
+}
+
+Hand Player::getHand() {
+	return hand;
 }
 
 
