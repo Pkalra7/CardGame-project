@@ -75,11 +75,11 @@ ostream& operator<<(ostream & os, Chain<T>& ch)
 	os << obj->getName();
 	os << " ";
 
-	for (auto card : ch.chain)
+	/*for (auto card : ch.chain)
 	{
 		card->print(os);
 		os << " ";
-	}
+	}*/
 	return os;
 }
 
