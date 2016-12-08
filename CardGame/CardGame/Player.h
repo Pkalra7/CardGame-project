@@ -13,11 +13,11 @@ protected:
     int numCoins = 0;
     std::string name;
 	vector<Chain_base*> chain;
-    Hand hand;
     int numChains = 0;
     int maxChainCount = 0;
 
 public:
+	Hand hand;
     //Constructor that creates a player with a given name
     Player(const std::string& );
     //Gets the name of the player

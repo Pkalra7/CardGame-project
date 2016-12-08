@@ -1,9 +1,9 @@
 #include <iostream>
 #include "Deck.h"
 #include "CardFactory.h"
-#include "Chain.h"
 #include "Obsidian.h"
 #include "Turquoise.h"
+#include "Player.h"
 
 
 
@@ -11,84 +11,10 @@ using namespace std;
 
 
 int main(int narg, char *args[]){
+	vector<Player> players;
+	Player p1("Ishaaq");
+	Player p2("Pritish");
 
-	//Testing to see if Get Deck works and to see if it has all the cards we need
-	
-	CardFactory * cf = CardFactory::getFactory();
-	
-	/*Deck dec = cf->getDeck();
-
-	int i= 1;
-
-	Card* removed = dec.draw();
-	for (Deck::iterator iter = dec.begin(); iter != dec.end(); iter++)
-	{
-		cout << i << ". " << (*iter)->getName() << " " << endl;
-		i++;
-	}
-	cout << removed->getName();
-	
-
-	ofstream outfile("deckkkk.txt");
-	outfile << dec << endl;
-	outfile.close();*/
-
-	ifstream infile("deckkkk.txt");
-	int i = 1;
-	Deck test(infile, cf);
-
-	infile.close();
-
-	
-	Card* removed = test.draw();
-
-	for (Deck::iterator iter = test.begin(); iter != test.end(); iter++)
-	{
-		cout << i << ". " << (*iter)->getName() << " " << endl;
-		i++;
-	}
-
-	removed->print(cout);
-
-	Obsidian* tl = (dynamic_cast<Obsidian*>(removed));
-
-	tl->print(cout);
-
-	Chain<Obsidian> *cl = new Chain<Obsidian>();
-	cl->chain.push_back(tl);
-	Chain<Obsidian> cl1(*cl);
-	
-
-	cout << "Obsidian has been removed and added to chain" << endl;
-	
-	//cout << test;
-	cout << cl1;
-/*
-	cout << " " << endl;
-
-	cout << " now writing to chain.txt" << endl;
-
-	ofstream chaintest("Chain.txt");
-	chaintest << cl1;
-	chaintest.close();
-
-	cout << "now reading from chain.txt" << endl;
-
-	ifstream intest("Chain.txt");
-
-	//Chain<Obsidian>*el=new Chain<Obsidian>(intest, cf);
-
-	cout << "about to print now" << endl;
-	*/
-
-	int s;
-	cin >> s;
-
-
-
-	
-
-	
     /*Deck<shared_ptr<Card>>deck;
     Table table;
     int noPlayers=0;

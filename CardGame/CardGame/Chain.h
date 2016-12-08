@@ -1,3 +1,4 @@
+#pragma once
 #ifndef CHAIN_H
 #define CHAIN_H
 
@@ -5,15 +6,13 @@
 #include <iostream>
 #include <fstream>
 #include <vector>
-#include "Chain_base.h"
 #include "CardFactory.h"
 
 
-template <class T> class Chain:public Chain_base {
-
-	
+template <class T> 
+class Chain : public Chain_base {
 public:
-	vector<T*> chain;
+	vector<T*> cardChain;
     //adds a card to chain
 	Chain() = default;
     //If the run-time type does not match the template type of the chain
@@ -23,12 +22,13 @@ public:
     //to the function Card::getCardsPerCoin
     int sell();
     //Insertion operator to print chain on the ostream goes here
-	friend ostream& operator<<<T>(ostream& os, Chain<T>& ch);
+	friend ostream& operator<< (ostream& os, Chain<T>& ch);
     //Constructor of Chain. Reconstructed using istream
     Chain(istream&, CardFactory* );
 
 };
 #endif // CHAIN_H
+
 
 template<class T>
 Chain<T>::Chain(istream& is, CardFactory *cf)
@@ -82,22 +82,4 @@ ostream& operator<<(ostream & os, Chain<T>& ch)
 	}
 	return os;
 }
-
-
-/*
-template <class T>
- ostream& operator<<(ostream & os, Chain<T>& ch)
-{
-	cout << "here" << endl;
-	T *obj = new T();
-	
-	os << obj->getName();
-	os << " ";
-
-	for (auto card : ch.chain)
-	{
-		card->print(os);
-		os << " ";
-	}
-	*/
 	
