@@ -20,8 +20,8 @@ Hand::Hand(istream&, CardFactory*) {
 
 }
 ostream& operator<<(ostream& os, Hand& h) {
-	for (auto i = h.begin(); i != h.end(); i++) {
-		os<< *i;
+	for (auto i: h) {
+		os<< i;
 	} 
 	return os;
 }

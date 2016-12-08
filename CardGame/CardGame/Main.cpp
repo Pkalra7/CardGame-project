@@ -16,7 +16,6 @@ int main(int narg, char *args[]){
 	
 	CardFactory * cf = CardFactory::getFactory();
 	
-	
 	/*Deck dec = cf->getDeck();
 
 	int i= 1;

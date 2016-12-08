@@ -25,7 +25,7 @@ public:
     //Insertion operator to print chain on the ostream goes here
 	friend ostream& operator<<<T>(ostream& os, Chain<T>& ch);
     //Constructor of Chain. Reconstructed using istream
-    Chain<T>(istream&, CardFactory* );
+    Chain( const istream&, CardFactory* );
 
 };
 #endif // CHAIN_H
@@ -53,11 +53,15 @@ Chain<T>& Chain<T>::operator+=(const T* s) {
 	return *this;
 }
 
-
 template <class T>
 int Chain<T>::sell() {
-	int numCards = t
-		return 2;
+	Card* c = chain[0];
+	int coinsAwarded = 0;
+	vector<int>cardsNeeded(4, 0);
+	while (chain.size() > c.getCardsPerCoin(coinsAwarded)) {
+		coinsAwarded++;
+	}
+	return coinsAwarded;
 }
 
 
@@ -76,4 +80,8 @@ ostream& operator<<(ostream & os, Chain<T>& ch)
 	}
 
 	return os;
+}
+template <class T>
+Chain<T>::Chain(const istream&, CardFactory*) {
+
 }
