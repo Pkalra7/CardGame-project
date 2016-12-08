@@ -23,15 +23,15 @@ public:
     //to the function Card::getCardsPerCoin
     int sell();
     //Insertion operator to print chain on the ostream goes here
-	friend ostream& operator<<<T>(ostream& os, Chain<T>& ch);
+	friend ostream& operator<<(ostream& os, Chain<T>& ch);
     //Constructor of Chain. Reconstructed using istream
-    Chain( const istream&, CardFactory* );
+    Chain(istream&, CardFactory* );
 
 };
 #endif // CHAIN_H
 
 template<class T>
-Chain<T>::Chain(istream & is, CardFactory *cf)
+Chain<T>::Chain(istream& is, CardFactory *cf)
 {
 	string type;
 	if (!is) {
@@ -47,6 +47,7 @@ Chain<T>::Chain(istream & is, CardFactory *cf)
 		this->chain.push_back(toBeInserted);
 	}
 }
+
 template <class T>
 Chain<T>& Chain<T>::operator+=(const T* s) {
 	this->chain->push_back(s);
@@ -68,7 +69,8 @@ int Chain<T>::sell() {
 template <class T>
 ostream& operator<<(ostream & os, Chain<T>& ch)
 {
-	T *obj = new T();
+	cout << "here" << endl;
+	/*T *obj = new T();
 	
 	os << obj->getName();
 	os << " ";
@@ -78,10 +80,6 @@ ostream& operator<<(ostream & os, Chain<T>& ch)
 		card->print(os);
 		os << " ";
 	}
-
+	*/
 	return os;
-}
-template <class T>
-Chain<T>::Chain(const istream&, CardFactory*) {
-
 }

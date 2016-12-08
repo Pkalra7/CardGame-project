@@ -76,7 +76,7 @@ int main(int narg, char *args[]){
 
 	ifstream intest("Chain.txt");
 
-	Chain<Obsidian>*el=new Chain<Obsidian>(intest, cf);
+	//Chain<Obsidian>*el=new Chain<Obsidian>(intest, cf);
 
 	cout << "about to print now" << endl;
 
