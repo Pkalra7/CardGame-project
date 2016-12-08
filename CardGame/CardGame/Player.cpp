@@ -55,7 +55,7 @@ ostream& operator<<(std::ostream& os, const Player& p) {
 	// os << Chain c;
 	return os;
 }
-//istream is constant here. I took it out since it does not work.
+
 Player::Player(istream& is, CardFactory* c) {
 	if (is) {
 		is >> name;

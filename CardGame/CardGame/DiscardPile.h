@@ -15,7 +15,7 @@ class DiscardPile: public vector<Card*> {
 public:
     //Discards the card to the pile
 	DiscardPile& operator+=(Card*);
-
+	DiscardPile() = default;
     //returns and removes the top card from the discard pile
     Card* pickUp();
     //returns but does not remove the top card from the discard pile

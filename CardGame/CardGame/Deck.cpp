@@ -17,8 +17,7 @@ Deck::Deck(istream& is, CardFactory* cf){
 }
 
 
-
-Card* Deck::draw() {
+ Card* Deck::draw() {
 	if (top >= 0) {
 		Card* toBeDrawn = this->back();
 		this->pop_back();
