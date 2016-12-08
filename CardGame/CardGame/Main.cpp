@@ -1,8 +1,10 @@
 #include <iostream>
 #include "Deck.h"
 #include "CardFactory.h"
-#include "Hand.h"
-#include "Player.h"
+#include "Chain.h"
+#include "Obsidian.h"
+#include "Turquoise.h"
+
 
 
 using namespace std; 
@@ -37,16 +39,52 @@ int main(int narg, char *args[]){
 
 	infile.close();
 
+	
+	Card* removed = test.draw();
+
 	for (Deck::iterator iter = test.begin(); iter != test.end(); iter++)
 	{
 		cout << i << ". " << (*iter)->getName() << " " << endl;
 		i++;
 	}
 
+	removed->print(cout);
+
+	Obsidian* tl = (dynamic_cast<Obsidian*>(removed));
+
+	tl->print(cout);
+
+	Chain<Obsidian> *cl = new Chain<Obsidian>();
+	cl->chain.push_back(tl);
+	Chain<Obsidian> cl1(*cl);
+
+
+	cout << "Obsidian has been removed and added to chain" << endl;
 	
-	
+	//cout << test;
+	cout << cl1;
+
+	cout << " " << endl;
+
+	cout << " now writing to chain.txt" << endl;
+
+	ofstream chaintest("Chain.txt");
+	chaintest << cl1;
+	chaintest.close();
+
+	cout << "now reading from chain.txt" << endl;
+
+	ifstream intest("Chain.txt");
+
+	Chain<Obsidian>*el=new Chain<Obsidian>(intest, cf);
+
+	cout << "about to print now" << endl;
+
+
 	int s;
 	cin >> s;
+
+
 
 	
 

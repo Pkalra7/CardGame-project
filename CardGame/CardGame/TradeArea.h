@@ -16,6 +16,7 @@ class TradeArea: public list<Card*> {
 public:
     //adds the card to the trade area but it does not check if it is legal to place the card
 	TradeArea& operator+=(Card*);
+	TradeArea() = default;
 
     //returns true if the card can be legally added to the TradeArea
     bool legal(const Card*);
