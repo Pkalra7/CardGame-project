@@ -2,10 +2,9 @@
 #ifndef HEMATITE_H
 #define HEMATITE_H
 
-
 #include "Card.h"
 
-class Hematite : public Card {
+class Hematite:public Card {
 	
 	public:
 		Hematite();
@@ -13,4 +12,4 @@ class Hematite : public Card {
 		void print(ostream & out) const;
 
 };
-#endif//HEMATITE
+#endif

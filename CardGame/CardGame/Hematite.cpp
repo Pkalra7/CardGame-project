@@ -1,6 +1,6 @@
 #include "Hematite.h"
 
-Hematite::Hematite() : Card() {
+Hematite::Hematite(){
 
 	cardName = "Hematite";
 }

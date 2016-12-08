@@ -5,6 +5,7 @@
 #include <iostream>
 #include <fstream>
 #include <vector>
+#include <string>
 #include "Chain_base.h"
 
 template <class T> class Chain:public Chain_base {
@@ -45,7 +46,7 @@ int Chain<T>::sell() {
 
 
 template <class T>
-friend ostream& operator<<(ostream& os, const Chain<T*>& ch) {
+ostream& operator<<(ostream& os, const Chain<T*>& ch) {
 	os << typeid(Card*).name() << " ";
 	for (auto card : ch)
 	{
@@ -56,5 +57,6 @@ friend ostream& operator<<(ostream& os, const Chain<T*>& ch) {
 }
 template <class T>
 Chain<T>::Chain(const istream&, CardFactory*) {
-
+	string gemstonename;
+	gemstonename >> istream;
 }

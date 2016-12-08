@@ -1,6 +1,6 @@
 #pragma once
-#ifndef HEMATITE_H
-#define HEMATITE_H
+#ifndef RUBY_H
+#define RUBY_H
 #include "Card.h"
 
 

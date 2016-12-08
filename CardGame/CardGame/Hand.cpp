@@ -26,5 +26,8 @@ ostream& operator<<(ostream& os, Hand& h) {
 	return os;
 }
 
+Hand::Hand() {
+
+}
 
 

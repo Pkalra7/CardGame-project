@@ -7,7 +7,7 @@ using namespace std;
 Player::Player(const string& name1){
     name = name1;
 }
-string Player::getName()const{
+string Player::getName() const{
     return name;
 }
 int Player::getNumCoins()const{
@@ -17,11 +17,13 @@ int Player::getMaxNumChains()const{
     return maxChainCount;
 }
 int Player::getNumChains()const{
-    return numChains;
+	//only print number of non-zero chains?
+    return chain.size();
 }
-/*Chain_base& Player::operator[](int i) {
-	return chain
-}*/
+Chain_base& Player::operator[](int i) {
+	Chain_base* c = chain[i];
+	return *c;
+}
 Player& Player::operator+=(const int coins) {
 	numCoins += coins;
 	return *this;
@@ -30,10 +32,10 @@ void Player::buyThirdChain(){
     if (numCoins >= 2){
         if (maxChainCount < 3){
             numCoins-= 2;
-            //add new chain
+			Chain_base* cb = new Chain_base();
+			//Add new empty chain
+			chain.push_back(cb);
             maxChainCount++;
-            //non-zero?
-            numChains++;
         }
     }
 }
@@ -41,18 +43,23 @@ void Player::buyThirdChain(){
 ostream: file to write to
 printHand: boolean to print entire hand or top card of hand 
 */
-void Player::printHand(std::ostream& os, bool printHand) {
-	if (!printHand) {
-		
+void Player::printHand(std::ostream& os, bool printFullHand) {
+	if (!printFullHand) {
+		hand.top()->print(os);
 	}
 	else {
-		//os << hand << endl;
+		for (auto handCard : hand) {
+			handCard->print(os);
+		}
 	}
 }
+template <class T>
 ostream& operator<<(std::ostream& os, const Player& p) {
 	os << p.getName() << endl;
 	os << p.getNumCoins() << endl;
-	// os << Chain c;
+	for (auto tempChain : p.chain) {
+		os << dynamic_cast<Chain<T>>tempChain;
+	}
 	return os;
 }
 //istream is constant here. I took it out since it does not work.
@@ -64,7 +71,6 @@ Player::Player(istream& is, CardFactory* c) {
 	else {
 		cerr << "Couldn't open file!";
 	}
-	//is >> c;
 }
 
 

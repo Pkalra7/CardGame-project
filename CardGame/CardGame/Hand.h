@@ -5,8 +5,10 @@
 #include <vector>
 #include <deque>
 #include "CardFactory.h"
+#include "Card.h"
 class Hand : public deque<Card*>{
 public:
+	Hand();
     //Adds the card to the rear of the hand
     Hand& operator+=(Card*);
     //returns and removes the top card from the players hand
