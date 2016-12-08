@@ -9,13 +9,15 @@
 #include "CardFactory.h"
 
 
-template <class T> class Chain:public Chain_base {
+template <class T> 
+class Chain:public Chain_base {
 
 	
 public:
 	vector<T*> chain;
-    //adds a card to chain
+    
 	Chain() = default;
+	//adds a card to chain
     //If the run-time type does not match the template type of the chain
     //Exception type of type IllegalType needs to be raised
     Chain<T>& operator+=(const T* );
@@ -28,7 +30,7 @@ public:
     Chain(istream&, CardFactory* );
 
 };
-#endif // CHAIN_H
+
 
 template<class T>
 Chain<T>::Chain(istream& is, CardFactory *cf)
@@ -82,22 +84,6 @@ ostream& operator<<(ostream & os, Chain<T>& ch)
 	}
 	return os;
 }
+#endif // CHAIN_H
 
-
-/*
-template <class T>
- ostream& operator<<(ostream & os, Chain<T>& ch)
-{
-	cout << "here" << endl;
-	T *obj = new T();
-	
-	os << obj->getName();
-	os << " ";
-
-	for (auto card : ch.chain)
-	{
-		card->print(os);
-		os << " ";
-	}
-	*/
 	

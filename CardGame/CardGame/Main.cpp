@@ -4,6 +4,8 @@
 #include "Chain.h"
 #include "Obsidian.h"
 #include "Turquoise.h"
+#include "Player.h"
+#include "TradeArea.h"
 
 
 
@@ -11,10 +13,76 @@ using namespace std;
 
 
 int main(int narg, char *args[]){
+	cout << "Hello";
+	TradeArea ta;
+	bool buyChainChoice, sellChoice, discardChoice;
+	int sellChainChoice;
+	vector<Player> players;
+	Player p1("Ishaaq");
+	Player p2("Pritish");
+	players.push_back(p1);
+	players.push_back(p2);
+	CardFactory * cf = CardFactory::getFactory();
+	Deck d = cf->getDeck();
+	for (auto p : players) {
+		for (int i = 0; i < 5; i++) {
+			p.hand += d.draw();
+			cout << i << endl;
+		}
+	}
+	int j;
+	//Printing each hand to test. Hand is busted.
+	for (auto p : players) {
+		for (int i = 0; i < 5; i++) {
+			//Hand is busted
+			//Card *c = p.hand.top();
+			cout << p.getName() << endl;
+			cin >> j;
+		}
+	}
+	for (auto p : players) {
+		//display table
+
+		//If Player has 3 coins and two chains and decides to buy extra chain
+		cout << p.getName() << ", would you like to buy a chain? (0 or 1)" << endl;
+		cin >> buyChainChoice;
+		p.buyThirdChain();
+		//Player draws top card from Deck
+		p.getHand() += d.draw();
+		//If TradeArea is not empty
+		if (ta.numCards != 0) {
+			//Add gemstone cards from the TradeArea to chains or discard them.
+			for (auto ch : p.chain) {
+				for (auto card1 : ta)
+					//enum type bullshit
+					//ch += card1;
+			}
+		}
+		//Play topmost card from Hand.
+		p.getHand().play();
+		//If chain is ended, cards for chain are removed and player receives coin(s).
+		cout << p.getName() << ", would you like to sell your chain? (0 or 1)" << endl;
+		cin >> sellChoice;
+		if (sellChoice) {
+			cout << p.getName() << ", which chain would you like to sell (1,2 or 3 if you have 3 chains)" << endl;
+			cin >> sellChainChoice;
+			//How to redirect to chain, not chain base?
+			//p1+=p1.chain[sellChainChoice]->sell();
+		}
+		//If player decides to show hand, select random card, discard
+		cout << p.getName() << ", would you like to discard a card?" << endl;
+		cin >> discardChoice;
+		
+		//Show the player's full hand and player selects an arbitrary card
+		
+	}
+
+
+
 
 	//Testing to see if Get Deck works and to see if it has all the cards we need
 	
-	CardFactory * cf = CardFactory::getFactory();
+	
 	
 	/*Deck dec = cf->getDeck();
 
@@ -33,36 +101,7 @@ int main(int narg, char *args[]){
 	outfile << dec << endl;
 	outfile.close();*/
 
-	ifstream infile("deckkkk.txt");
-	int i = 1;
-	Deck test(infile, cf);
-
-	infile.close();
-
 	
-	Card* removed = test.draw();
-
-	for (Deck::iterator iter = test.begin(); iter != test.end(); iter++)
-	{
-		cout << i << ". " << (*iter)->getName() << " " << endl;
-		i++;
-	}
-
-	removed->print(cout);
-
-	Obsidian* tl = (dynamic_cast<Obsidian*>(removed));
-
-	tl->print(cout);
-
-	Chain<Obsidian> *cl = new Chain<Obsidian>();
-	cl->chain.push_back(tl);
-	Chain<Obsidian> cl1(*cl);
-	
-
-	cout << "Obsidian has been removed and added to chain" << endl;
-	
-	//cout << test;
-	cout << cl1;
 /*
 	cout << " " << endl;
 
@@ -81,8 +120,8 @@ int main(int narg, char *args[]){
 	cout << "about to print now" << endl;
 	*/
 
-	int s;
-	cin >> s;
+	//int s;
+	//cin >> s;
 
 
 

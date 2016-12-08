@@ -73,4 +73,8 @@ Player::Player(istream& is, CardFactory* c) {
 	}
 }
 
+Hand Player::getHand() {
+	return hand;
+}
+
 
