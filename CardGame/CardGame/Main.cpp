@@ -35,7 +35,7 @@ int main(int narg, char *args[]){
 	for (auto p : players) {
 		for (int i = 0; i < 5; i++) {
 			//Hand is busted
-			//Card *c = p.hand.top();
+			Card *c = p.hand.top();
 			cout << p.getName() << endl;
 			cin >> j;
 		}
@@ -50,16 +50,17 @@ int main(int narg, char *args[]){
 		//Player draws top card from Deck
 		p.getHand() += d.draw();
 		//If TradeArea is not empty
-		if (ta.numCards != 0) {
+		if (ta.numCards() != 0) {
 			//Add gemstone cards from the TradeArea to chains or discard them.
 			for (auto ch : p.chain) {
-				for (auto card1 : ta)
+				for (auto card1 : ta) {
 					//enum type bullshit
 					//ch += card1;
+				}
 			}
 		}
 		//Play topmost card from Hand.
-		p.getHand().play();
+		//p.getHand().play();
 		//If chain is ended, cards for chain are removed and player receives coin(s).
 		cout << p.getName() << ", would you like to sell your chain? (0 or 1)" << endl;
 		cin >> sellChoice;
@@ -72,8 +73,10 @@ int main(int narg, char *args[]){
 		//If player decides to show hand, select random card, discard
 		cout << p.getName() << ", would you like to discard a card?" << endl;
 		cin >> discardChoice;
-		
-		//Show the player's full hand and player selects an arbitrary card
+		if (discardChoice) {
+			//Show the player's full hand and player selects an arbitrary card
+		}
+	
 		
 	}
 
