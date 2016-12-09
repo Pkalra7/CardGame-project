@@ -10,20 +10,20 @@ Hand& Hand::operator+=(Card* c) {
 //	this->pop_front();
 //	return c;
 //}
-Card* Hand::top() {
+Card* Hand::top() const{
 	return this->front();
 }
 
 Card* Hand::operator[](int index) {
-	deque<Card*> d = *this;
+	vector<Card*> d = *this;
 	return d[index];
 }
 Hand::Hand(istream&, CardFactory*) {
 
 }
 ostream& operator<<(ostream& os, Hand& h) {
-	for (auto i: h) {
-		os<< i;
+	for (auto card: h) {
+		card->print(os);
 	} 
 	return os;
 }

@@ -21,7 +21,7 @@ public:
 	 friend ostream& operator<<(ostream&,  const Deck&);
 	  
 	
-	 //Deck getDeck();
+	 
  };
 #endif 
 

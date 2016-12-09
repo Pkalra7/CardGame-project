@@ -13,10 +13,12 @@ using namespace std;
 
 
 int main(int narg, char *args[]){
-	cout << "Hello";
+	
+	
+	/*cout << "Hello";
 	TradeArea ta;
 	bool buyChainChoice, sellChoice, discardChoice;
-	int sellChainChoice;
+	int sellChainChoice;*/
 	vector<Player> players;
 	Player p1("Ishaaq");
 	Player p2("Pritish");
@@ -24,22 +26,41 @@ int main(int narg, char *args[]){
 	players.push_back(p2);
 	CardFactory * cf = CardFactory::getFactory();
 	Deck d = cf->getDeck();
-	for (auto p : players) {
-		for (int i = 0; i < 5; i++) {
-			p.hand += d.draw();
-			cout << i << endl;
-		}
-	}
-	int j;
+	//for (auto p : players) {
+		//for (int i = 0; i < 5; i++) {
+	cout << "printing out deck d"<< endl;
+	cout << d << endl;
+
+	cout << "dec d printed" << endl;
+
+	Card *c = d.draw();
+
+	cout << "Card c was drawn " << endl;
+
+	cout << "deck d after card c draw " << endl;
+
+	cout << d;
+			
+		
+			
+		    
+			//p.hand += d.draw();
+			
+		//}
+	//}
+
+	//cout << (players[0].hand);
+	
+	
 	//Printing each hand to test. Hand is busted.
-	for (auto p : players) {
-		for (int i = 0; i < 5; i++) {
+	//for (auto p : players) {
+		// (int i = 0; i < 5; i++) {
 			//Hand is busted
-			Card *c = p.hand.top();
-			cout << p.getName() << endl;
+			/*Card *c = players[0].hand.front();
+			cout << c->getName();
 			cin >> j;
-		}
-	}
+		//}
+	//
 	for (auto p : players) {
 		//display table
 

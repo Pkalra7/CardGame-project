@@ -17,6 +17,8 @@ using namespace std;
 CardFactory* CardFactory::factory = nullptr;
 Deck CardFactory::newDeck;
 int CardFactory::count = 0;
+std::random_device rd;
+std::mt19937 g(rd());
 
 
 
@@ -167,10 +169,11 @@ Deck CardFactory::getDeck() {
 	}
 
 
-	unsigned seed = std::chrono::system_clock::now().time_since_epoch().count();
-	std::shuffle(newDeck.begin(), newDeck.end(), std::default_random_engine(seed));
 	
-	return newDeck;
+	std::random_shuffle(newDeck.begin(), newDeck.end());
+	
+	Deck ToBeReturned(newDeck);
+	return ToBeReturned;
 }
 	/*
 	Fill Deck with 104 cards

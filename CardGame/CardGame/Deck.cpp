@@ -18,12 +18,12 @@ Deck::Deck(istream& is, CardFactory* cf){
 
 
  Card* Deck::draw() {
-	if (top >= 0) {
+	 
 		Card* toBeDrawn = this->back();
 		this->pop_back();
 		this->top--;
 		return toBeDrawn;
-	}
+	
 }
 
 ostream& operator<<(ostream& os, const Deck& deck) {
