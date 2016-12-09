@@ -1,7 +1,11 @@
 #include "Table.h"
 #include <iostream>
 #include <string>
-/*
+
+Table::Table()
+{
+}
+
 bool Table::win(std::string& winner) {
 	Player p1 = players[0];
 	Player p2 = players[1];
@@ -37,4 +41,4 @@ Table::Table(const istream& is, CardFactory* c) {
 	else {
 		cerr << "could not open file!";
 	}
-}*/
+}

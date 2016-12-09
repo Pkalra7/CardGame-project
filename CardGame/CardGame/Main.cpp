@@ -6,6 +6,8 @@
 #include "Turquoise.h"
 #include "Player.h"
 #include "TradeArea.h"
+#include "DiscardPile.h"
+#include "Table.h"
 
 
 
@@ -13,9 +15,12 @@ using namespace std;
 
 
 int main(int narg, char *args[]){
+	ofstream outfile("deckkkk.txt");
 	cout << "Hello";
 	TradeArea ta;
-	bool buyChainChoice, sellChoice, discardChoice;
+	DiscardPile dp;
+	//Table t;
+	bool buyChainChoice, chainNumberChoice, discardChoice, chainChoice, sellChoice;
 	int sellChainChoice;
 	vector<Player> players;
 	Player p1("Ishaaq");
@@ -26,7 +31,7 @@ int main(int narg, char *args[]){
 	Deck d = cf->getDeck();
 	for (auto p : players) {
 		for (int i = 0; i < 5; i++) {
-			p.hand += d.draw();
+			p.getHand() += d.draw();
 			cout << i << endl;
 		}
 	}
@@ -35,14 +40,14 @@ int main(int narg, char *args[]){
 	for (auto p : players) {
 		for (int i = 0; i < 5; i++) {
 			//Hand is busted
-			Card *c = p.hand.top();
+			Card *c = p.getHand().top();
 			cout << p.getName() << endl;
 			cin >> j;
 		}
 	}
 	for (auto p : players) {
 		//display table
-
+		//t.print(outfile);
 		//If Player has 3 coins and two chains and decides to buy extra chain
 		cout << p.getName() << ", would you like to buy a chain? (0 or 1)" << endl;
 		cin >> buyChainChoice;
@@ -66,7 +71,7 @@ int main(int narg, char *args[]){
 		cin >> sellChoice;
 		if (sellChoice) {
 			cout << p.getName() << ", which chain would you like to sell (1,2 or 3 if you have 3 chains)" << endl;
-			cin >> sellChainChoice;
+			cin >> chainNumberChoice;
 			//How to redirect to chain, not chain base?
 			//p1+=p1.chain[sellChainChoice]->sell();
 		}
@@ -74,10 +79,47 @@ int main(int narg, char *args[]){
 		cout << p.getName() << ", would you like to discard a card?" << endl;
 		cin >> discardChoice;
 		if (discardChoice) {
-			//Show the player's full hand and player selects an arbitrary card
+			//show hand
+			for (auto card : p.getHand()) {
+				cout << card->getName() << endl;
+			}
+			//select random card and send to discardPile (3 for now)
+			dp+=p.getHand()[3];
 		}
-	
-		
+		//Draw three cards from the deck
+		for (int i = 0; i < 3; i++) {
+			p.getHand() += d.draw();
+		}
+		//place cards in the trade area?
+
+		//while top card of discard pile matches an existing card in the trade area
+		for (auto taCard : ta) {
+			if (dp.top()->getName() == taCard->getName()) {
+				ta += dp.pickUp();
+			}
+			else { break; }
+		}
+		for (auto taCard : ta) {
+			cout << p.getName() << ", would you like to chain the card: " << taCard->getName() << endl;
+			cin >> chainChoice;
+			if (chainChoice) {
+				for (auto c : p.chain) {
+					//Add the card to the chain
+				}
+			}
+			//If chain is ended 
+			cout << p.getName() << ", would you like to sell your chain? (0 or 1)" << endl;
+			cin >> sellChoice;
+			if (sellChoice) {
+				//cards for chain are removed and player receives coin(s).
+				cout << p.getName() << ", which chain would you like to sell (1,2 or 3 if you have 3 chains)" << endl;
+				cin >> chainNumberChoice;
+				//How to redirect to chain, not chain base?
+				//p1+=p1.chain[sellChainChoice]->sell();
+			}
+		}
+		p.getHand() += d.draw();
+		p.getHand() += d.draw();
 	}
 
 
