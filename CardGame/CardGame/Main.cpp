@@ -29,6 +29,8 @@ int main(int narg, char *args[]){
 	players.push_back(p2);
 	CardFactory * cf = CardFactory::getFactory();
 	Deck d = cf->getDeck();
+
+
 	for (auto p : players) {
 		for (int i = 0; i < 5; i++) {
 			p.getHand() += d.draw();
@@ -123,7 +125,7 @@ int main(int narg, char *args[]){
 	}
 
 
-
+	
 
 	//Testing to see if Get Deck works and to see if it has all the cards we need
 	

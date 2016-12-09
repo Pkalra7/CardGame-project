@@ -16,6 +16,7 @@
 class Table{
 protected:
 	vector<Player> players;
+	
 	Deck d;
 	DiscardPile dp;
 	TradeArea ta;
@@ -29,7 +30,7 @@ public:
     //Prints the complete table with all content. Intended for serialization to the file.
     void print(std::ostream&);
     //Insertion operator goes here
-	friend ostream& operator<<(std::ostream& os, Table&);
+	friend ostream& operator<<(std::ostream& os, const Table&);
     //Table constructor with istream used to reconstruct Table
     Table( const istream&, CardFactory* );
     //It says Player( const istream&, CardFactory* ) in the pdf...

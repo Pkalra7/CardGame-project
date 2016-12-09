@@ -6,7 +6,7 @@
 #include <deque>
 #include "CardFactory.h"
 #include "Card.h"
-class Hand : public vector<Card*>{
+class Hand : public deque<Card*>{
 public:
 	Hand();
     //Adds the card to the rear of the hand
@@ -16,9 +16,9 @@ public:
     //returns but does not remove the top card from the players hand
     Card* top() const;
     //returns and removes the card at the given index
-    Card* operator[](int);
+    Card* operator[](int) const;
     //Insertion operator goes here
-	friend ostream& operator<<(ostream& os, Hand& h);
+	friend ostream& operator<<(ostream& os, const Hand& h);
     //Hand Constructor reconstructed from file
     Hand(istream&, CardFactory* );
 };

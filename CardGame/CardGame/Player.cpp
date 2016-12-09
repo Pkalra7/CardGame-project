@@ -1,6 +1,14 @@
 #include "Player.h"
 #include <string>
+#include "Quartz.h"
 #include <iostream>
+#include "Hematite.h"
+#include "Amethyst.h"
+#include "Obsidian.h"
+#include "Emerald.h"
+#include "Malachite.h"
+#include "Turquoise.h"
+#include "Ruby.h"
 
 using namespace std;
 
@@ -20,7 +28,7 @@ int Player::getNumChains()const{
 	//only print number of non-zero chains?
 	return chain.size();
 }
-Chain_base& Player::operator[](int i) {
+Chain_base& Player::operator[](int i) const {
 	Chain_base* c = chain[i];
 	return *c;
 }
@@ -43,7 +51,7 @@ void Player::buyThirdChain(){
 ostream: file to write to
 printHand: boolean to print entire hand or top card of hand 
 */
-void Player::printHand(std::ostream& os, bool printFullHand) {
+void Player::printHand(std::ostream& os, bool printFullHand) const{
 	if (!printFullHand) {
 		hand.top()->print(os);
 	}
@@ -73,8 +81,34 @@ Player::Player(istream& is, CardFactory* c) {
 	}
 }
 
-Hand Player::getHand() {
+Hand Player::getHand() const{
 	return hand;
 }
 
+void Player::instantiateChainType(const Card * c, Chain_base*& cb) {
+	if (c->getName() == "Quartz") {
+		cb = new Chain<Quartz>();
+	}
+	else if(c->getName() == "Hematite") {
+		cb = new Chain<Hematite>();
+	}
+	else if (c->getName() == "Obsidian") {
+		cb = new Chain<Obsidian>();
+	}
+	else if (c->getName() == "Malachite") {
+		cb = new Chain<Malachite>();
+	}
+	else if (c->getName() == "Emerald") {
+		cb = new Chain<Emerald>();
+	}
+	else if (c->getName() == "Amethyst") {
+		cb = new Chain<Amethyst>();
+	}
+	else if (c->getName() == "Turquoise") {
+		cb = new Chain<Turquoise>();
+	}
+	else if (c->getName() == "Ruby") {
+		cb = new Chain<Ruby>();
+	}
+}
 

@@ -20,12 +20,12 @@ public:
 	//adds a card to chain
     //If the run-time type does not match the template type of the chain
     //Exception type of type IllegalType needs to be raised
-    Chain<T>& operator+=(const T* );
+    Chain<T>& operator+=(T* );
     //counts the number of cards in the chain and returns the number of coins according
     //to the function Card::getCardsPerCoin
     int sell();
     //Insertion operator to print chain on the ostream goes here
-	friend ostream& operator<<<T>(ostream& os, Chain<T>& ch);
+	friend ostream& operator<<(ostream& os, const Chain<T>& ch);
     //Constructor of Chain. Reconstructed using istream
     Chain(istream&, CardFactory* );
 
@@ -51,7 +51,7 @@ Chain<T>::Chain(istream& is, CardFactory *cf)
 }
 
 template <class T>
-Chain<T>& Chain<T>::operator+=(const T* s) {
+Chain<T>& Chain<T>::operator+=(T* s) {
 	this->chain->push_back(s);
 	return *this;
 }
@@ -68,7 +68,7 @@ int Chain<T>::sell() {
 }
 
 template<class T>
-ostream& operator<<(ostream & os, Chain<T>& ch)
+ostream& operator<<(ostream & os, const Chain<T>& ch)
 {
 
 	cout << "here" << endl;

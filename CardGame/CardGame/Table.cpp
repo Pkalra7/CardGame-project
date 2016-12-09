@@ -4,6 +4,7 @@
 
 Table::Table()
 {
+
 }
 
 bool Table::win(std::string& winner) {
@@ -22,19 +23,27 @@ bool Table::win(std::string& winner) {
 	return false;
 }
 void Table::print(std::ostream& os) {
-	os << players[0];
-	os << players[1];
-	//os << dp;
+	
+	/*for (vector<Player>::iterator iter = players.begin();iter != players.end();iter++)
+	{
+		os << *iter << endl;
+		os << " " << endl;
+	}*/
+	os << dp;
 	os << ta;
+	os << d;
 }
-ostream& operator<<(std::ostream & os, Table& t)
+/*ostream& operator<<(std::ostream & os, const Table& t)
 {
-	os << t.players[0];
-	os << t.players[1];
+	for (vector<Player>::iterator iter = players.begin();iter != players.end();iter++)
+	{
+		os << *iter << endl;
+		os << " " << endl;
+	}
 	os << t.dp;
 	os << t.ta;
 	return os;
-}
+}*/
 Table::Table(const istream& is, CardFactory* c) {
 	if (is) {
 	}

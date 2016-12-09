@@ -21,7 +21,6 @@ Deck::Deck(istream& is, CardFactory* cf){
 	 
 		Card* toBeDrawn = this->back();
 		this->pop_back();
-		this->top--;
 		return toBeDrawn;
 	
 }

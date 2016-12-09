@@ -39,13 +39,6 @@ CardFactory* CardFactory::getFactory() {
 	}
 }
 
-CardFactory::~CardFactory() {
-	for (Deck::iterator iter = newDeck.begin(); iter != newDeck.end(); iter++)
-	{
-		delete *iter;
-	}
-}
-
 Card* CardFactory::getCard(char cardtype) {
 	Card * type = nullptr;
 	switch (cardtype) {
@@ -170,10 +163,16 @@ Deck CardFactory::getDeck() {
 
 
 	
-	std::random_shuffle(newDeck.begin(), newDeck.end());
+	std::shuffle(newDeck.begin(), newDeck.end(), g);
 	
-	Deck ToBeReturned(newDeck);
-	return ToBeReturned;
+	return newDeck;
+}
+
+CardFactory::~CardFactory() {
+	for (Deck::iterator iter = newDeck.begin(); iter != newDeck.end(); iter++)
+	{
+		delete *iter;
+	}
 }
 	/*
 	Fill Deck with 104 cards

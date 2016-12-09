@@ -14,9 +14,13 @@ using namespace std;
 class TradeArea: public list<Card*> {
 	int count = 0;
 public:
+	//Defualt Constructor
+	TradeArea() = default;
+	//TradeArea constructor to reconstruct TradeArea from the file
+	TradeArea(istream&, CardFactory*);
     //adds the card to the trade area but it does not check if it is legal to place the card
 	TradeArea& operator+=(Card*);
-	TradeArea() = default;
+	
 
     //returns true if the card can be legally added to the TradeArea
     bool legal(const Card*);
@@ -28,8 +32,7 @@ public:
 	friend ostream& operator<<(ostream& os, TradeArea& ta);
 	
 
-    //TradeArea constructor to reconstruct TradeArea from the file
-    TradeArea(istream&, CardFactory* );
+   
 
 };
 #endif // TRADEAREA_H

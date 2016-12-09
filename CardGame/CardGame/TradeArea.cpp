@@ -18,7 +18,7 @@ TradeArea& TradeArea::operator+=(Card* card) {
 	return *this;
 }
 
-bool TradeArea::legal(const Card* card) {
+bool TradeArea::legal(const Card* card){
 	for (TradeArea::iterator iter = this->begin(); iter != this->end();iter++) {
 		if((*iter)->getName() == card->getName())
 		{return true;}
