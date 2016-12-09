@@ -1,6 +1,6 @@
 #ifndef TABLE_H
 #define TABLE_H
-#endif // PLAYER_H
+
 
 #include <iostream>
 #include <fstream>
@@ -21,6 +21,7 @@ protected:
 	TradeArea ta;
 
 public:
+	Table();
     //Returns true when a player has won. The name of the player is returned by reference
     //The winning condition is that all cards from the deck must have been picked up
     //and then the player with the most coins wins
@@ -33,3 +34,4 @@ public:
     Table( const istream&, CardFactory* );
     //It says Player( const istream&, CardFactory* ) in the pdf...
 };
+#endif // TABLE_H

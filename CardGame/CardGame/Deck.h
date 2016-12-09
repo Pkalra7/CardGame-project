@@ -19,9 +19,6 @@ public:
 	 Card* draw();
 	 //insertion operator to insert all cards the cards in the deck to an std::ostream
 	 friend ostream& operator<<(ostream&,  const Deck&);
-	  
-	
-	 
  };
 #endif 
 
